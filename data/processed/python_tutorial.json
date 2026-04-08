@@ -1,0 +1,3002 @@
+[
+  {
+    "doc_id": "appetite.html",
+    "title": "1. 淺嘗滋味¶",
+    "paragraph_id": 2,
+    "text": "如果你經常在電腦上工作，最終總能發現有些工作你會想要自動化。舉例來說，你會想在很多文字檔案裡做相同的搜尋取代，或者是用個複雜的規則重新命名或整理一群照片。也有可能你想寫個自己的小資料庫，一個專門的 GUI 應用程式，或一個小遊戲。"
+  },
+  {
+    "doc_id": "appetite.html",
+    "title": "1. 淺嘗滋味¶",
+    "paragraph_id": 3,
+    "text": "如果你是一個職業軟體開發者，你可能要操作數個 C/C++/Java 程式庫，卻覺得平常寫程式碼、編譯、測試、再編譯的流程太慢；有可能你正為了一個程式庫撰寫一套測試集，但發現寫測試單調乏味；也有可能你正在開發一個能使用某一語言擴充的程式，但並不想要為了這程式特別設計一個全新的擴充語言。"
+  },
+  {
+    "doc_id": "appetite.html",
+    "title": "1. 淺嘗滋味¶",
+    "paragraph_id": 5,
+    "text": "也許你可以為了某些任務而寫個 Unix shell 腳本或者 Windows 批次檔來處理，但 shell 腳本最適合於搬動檔案或更動文字內容，而不適於圖形應用程式或遊戲。你可以為此寫個 C/C++/Java 程式，但僅僅是完成個草稿也需要很長的開發時間。相較而言，Python 更易於使用，並能在 Windows、macOS、Unix 作業系統上執行，且能更快速地幫助你完成工作。"
+  },
+  {
+    "doc_id": "appetite.html",
+    "title": "1. 淺嘗滋味¶",
+    "paragraph_id": 6,
+    "text": "Python 即便易用也是個貨真價實的程式語言。它提供比 shell 腳本、批次檔更多樣的程式架構與更多的支援。另一方面，Python 提供比 C 更豐富的錯誤檢查。相較於 C，Python 作為一個「非常高階的程式語言」，它內建了高階的資料型別如彈性的陣列與字典。因為這些多用途的資料型別，Python 適用解決比 Awk（甚至是 Perl）能處理的更多問題上。至少在許多事情中，使用 Python 處理起來跟其他語言是同樣容易的。"
+  },
+  {
+    "doc_id": "appetite.html",
+    "title": "1. 淺嘗滋味¶",
+    "paragraph_id": 7,
+    "text": "Python 允許你把程式切割成許多模組 (module) 並將他們重複運用至其他 Python 程式中。Python 自帶了一個很大集合的標準模組，它們能做為你程式的基礎——或把它們當作一開始學寫 Python 程式的範例。有些模組提供了如檔案 I/O、系統呼叫、socket 的功能，甚至提供了 Tk 等圖形介面工具庫 (GUI toolkit) 的介面。"
+  },
+  {
+    "doc_id": "appetite.html",
+    "title": "1. 淺嘗滋味¶",
+    "paragraph_id": 8,
+    "text": "Python 是個直譯式語言，因為不需要編譯與連結，能為你在開發過程中省下可觀的時間。它的直譯器能互動地使用，因此能很方便地實驗每個語言的功能、寫些用完即丟的程式、幫助測試一些從細部開始開發的函式。它也是個好用的計算機。"
+  },
+  {
+    "doc_id": "appetite.html",
+    "title": "1. 淺嘗滋味¶",
+    "paragraph_id": 9,
+    "text": "Python 讓程式寫得精簡並易讀。用 Python 實作的程式長度往往遠比用 C、C++、Java 實作的短。這有以下幾個原因："
+  },
+  {
+    "doc_id": "appetite.html",
+    "title": "1. 淺嘗滋味¶",
+    "paragraph_id": 13,
+    "text": "Python 是可擴充的：如果你會寫 C 程式，那麼要加個新的內建函式或模組到直譯器中是很容易的。無論是為了用最快速的執行速度完成一些關鍵的操作，或是讓 Python 連結到一些僅以二進位形式 (binary form) 釋出的程式庫（例如特定供應商的繪圖程式庫）。如果你想更多這樣的結合，你其實也可以把 Python 直譯器連結到用 C 寫的應用程式，並在該應用程式中使用 Python 寫擴充或者作為下達指令的語言。"
+  },
+  {
+    "doc_id": "appetite.html",
+    "title": "1. 淺嘗滋味¶",
+    "paragraph_id": 14,
+    "text": "順帶一提，這個語言是以 BBC 的戲劇《Monty Python's Flying Circus》命名，與爬蟲類完全沒有關係。在說明文件中引用他們的喜劇不但沒問題，這甚至是個被鼓勵的行為！"
+  },
+  {
+    "doc_id": "appetite.html",
+    "title": "1. 淺嘗滋味¶",
+    "paragraph_id": 15,
+    "text": "如果你現在已經躍躍欲試，你會想了解 Python 更多細節，而學習語言的最好方式就是直接使用它。接下來這個教學就將帶領你，一邊閱讀，一邊將所學用在 Python 直譯器中玩耍。"
+  },
+  {
+    "doc_id": "appetite.html",
+    "title": "1. 淺嘗滋味¶",
+    "paragraph_id": 17,
+    "text": "接下來的教學裡，將會透過許多範例介紹 Python 語言與其系統的諸多特色。一開始是簡單的運算式 (expression)、陳述式 (statement) 和資料型別 (data type)；接著是函式 (function) 與模組 (module)；最後會接觸一些較進階的主題如例外 (exception) 與使用者定義類別 (class)。"
+  },
+  {
+    "doc_id": "interpreter.html",
+    "title": "2. 使用 Python 直譯器¶",
+    "paragraph_id": 2,
+    "text": "在有安裝的機器上 Python 直譯器通常是被安裝在 /usr/local/bin/python3.14；把 /usr/local/bin 放在 Unix shell 的搜尋路徑中就可以透過輸入命令來啟動它："
+  },
+  {
+    "doc_id": "interpreter.html",
+    "title": "2. 使用 Python 直譯器¶",
+    "paragraph_id": 3,
+    "text": "能啟動 Python [1]。因為直譯器存放的目錄是個安裝選項，其他的目錄也是有可能的；請洽談在地的 Python 達人或者系統管理員。（例如：/usr/local/python 是個很常見的另類存放路徑。）"
+  },
+  {
+    "doc_id": "interpreter.html",
+    "title": "2. 使用 Python 直譯器¶",
+    "paragraph_id": 4,
+    "text": "Windows 系統中，從 Microsoft Store 安裝 Python 後，就可以使用 python3.14 命令了。如果安裝了 py.exe launcher ，則可以使用 py 命令。請參閱 Python 安裝管理員 了解其他啟動 Python 的方式。"
+  },
+  {
+    "doc_id": "interpreter.html",
+    "title": "2. 使用 Python 直譯器¶",
+    "paragraph_id": 5,
+    "text": "在主提示字元輸入一個 end-of-file 字元（在 Unix 上為 Control-D；在 Windows 上為 Control-Z）會使得直譯器以零退出狀況 (zero exit status) 離開。如果上述的做法沒有效，也可以輸入 quit() 命令離開直譯器。"
+  },
+  {
+    "doc_id": "interpreter.html",
+    "title": "2. 使用 Python 直譯器¶",
+    "paragraph_id": 6,
+    "text": "直譯器的命令列編輯功能有很多，在大多數系統上包含：互動編輯、歷史取代、命令補完等功能。最快檢查有無支援命令列編輯的方法為：在第一個 Python 提示字元後輸入 Control-P，如果出現嗶嗶聲，就代表有支援；見附錄互動式輸入編輯和歷史記錄替換介紹相關的快速鍵。如果什麼事都沒有發生，或者出現一個 ^P，就代表並沒有命令列編輯功能；此時只能使用 backspace 去除該行的字元。"
+  },
+  {
+    "doc_id": "interpreter.html",
+    "title": "2. 使用 Python 直譯器¶",
+    "paragraph_id": 7,
+    "text": "這個直譯器使用起來像是 Unix shell：如果它被呼叫時連結至一個 tty 裝置，它會互動式地讀取並執行命令；如果被呼叫時給定檔名為引數或者使用 stdin 傳入檔案內容，它會將這個檔案視為腳本來閱讀。"
+  },
+  {
+    "doc_id": "interpreter.html",
+    "title": "2. 使用 Python 直譯器¶",
+    "paragraph_id": 8,
+    "text": "另一個啟動直譯器的方式為 python -c command [arg] ...，它會執行在 command 裡的陳述式（們），行為如同 shell 的 -c 選項。因為 Python 的陳述式包含空白等 shell 用到的特殊字元，通常建議用引號把 command 包起來。"
+  },
+  {
+    "doc_id": "interpreter.html",
+    "title": "2. 使用 Python 直譯器¶",
+    "paragraph_id": 9,
+    "text": "有些 Python 模組使用上如腳本般一樣方便。透過 python -m module [arg] ... 可以執行 module 模組的原始碼，就如同直接傳入那個模組的完整路徑一樣的行為。"
+  },
+  {
+    "doc_id": "interpreter.html",
+    "title": "2. 使用 Python 直譯器¶",
+    "paragraph_id": 10,
+    "text": "當要執行一個腳本檔時，有時候會希望在腳本結束時進入互動模式。這可以透過在腳本前加入 -i 選項來達成。"
+  },
+  {
+    "doc_id": "interpreter.html",
+    "title": "2. 使用 Python 直譯器¶",
+    "paragraph_id": 12,
+    "text": "當直譯器收到腳本的名稱和額外的引數後，他們會轉換為由字串所組成的 list（串列）並指派給 sys 模組的 argv 變數。你可以執行 import sys 取得這個串列。這個串列的長度至少為一；當沒有給任何腳本名稱和引數時， sys.argv[0] 為空字串。當腳本名為 '-'（指標準輸入）時， sys.argv[0] 為 '-'。當使用 -c command 時， sys.argv[0] 為 '-c'。當使用 -m module 時， sys.argv[0] 為該模組存在的完整路徑。其餘非 -c command 或 -m module 的選項不會被 Python 直譯器吸收掉，而是留在 sys.argv 變數中給後續的 command 或 module 使用。"
+  },
+  {
+    "doc_id": "interpreter.html",
+    "title": "2. 使用 Python 直譯器¶",
+    "paragraph_id": 13,
+    "text": "當命令從終端 (tty) 被讀取時，直譯器被稱為在互動模式（interactive mode）中。在這種模式中，會顯示主提示字元，提示輸入下一條命令，主提示字元通常用三個大於號（>>>）表示；輸入連續行時，顯示次要提示字元，預設是三個點（...）。進入直譯器時，首先顯示歡迎訊息、版本訊息、版權聲明，然後才是提示字元："
+  },
+  {
+    "doc_id": "interpreter.html",
+    "title": "2. 使用 Python 直譯器¶",
+    "paragraph_id": 16,
+    "text": "預設 Python 原始碼檔案的字元編碼使用 UTF-8。在這個編碼中，世界上多數語言的文字可以同時被使用在字串內容、識別名 (identifier) 及註解中 --- 雖然在標準函式庫中只使用 ASCII 字元作為識別名，這也是個任何 portable 程式碼需遵守的慣例。如果要正確地顯示所有字元，你的編輯器需要能夠認識檔案為 UTF-8，並且需要能顯示檔案中所有字元的字型。"
+  },
+  {
+    "doc_id": "interpreter.html",
+    "title": "2. 使用 Python 直譯器¶",
+    "paragraph_id": 20,
+    "text": "第一行的規則也有一種例外情況，在原始碼以 UNIX \"shebang\" line 行開頭時。此時，編碼聲明要寫在檔案的第二行。例如："
+  },
+  {
+    "doc_id": "interpreter.html",
+    "title": "2. 使用 Python 直譯器¶",
+    "paragraph_id": 22,
+    "text": "在 Unix 中，Python 3.x 直譯器預設安裝不會以 python 作為執行檔名稱，以避免與現有的 Python 2.x 執行檔名稱衝突。"
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 2,
+    "text": "在下面的例子中，輸入與輸出的區別在於有無提示字元（prompt，>>> 和 ...）：如果要重做範例，你必須在提示字元出現的時候，輸入提示字元後方的所有內容；那些非提示字元開始的文字行是直譯器的輸出。注意到在範例中，若出現單行只有次提示字元時，代表該行你必須直接換行；這被使用在多行指令結束輸入時。"
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 3,
+    "text": "你可以使用 \"Copy\" 按鈕（當游標移至程式碼範例上方或點選程式碼範例時，它會出現在右上角），這會去除提示字元並略過輸出，讓你可以複製貼上輸入行到你的直譯器。"
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 4,
+    "text": "在本手冊中的許多範例中，即便他們為互動式地輸入，仍然包含註解。Python 中的註解 (comments) 由 hash 字元 # 開始一直到該行結束。註解可以從該行之首、空白後、或程式碼之後開始，但不會出現在字串文本 (string literal) 之中。hash 字元在字串文本之中時仍視為一 hash 字元。因為註解只是用來說明程式而不會被 Python 解讀，在練習範例時不一定要輸入。"
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 6,
+    "text": "讓我們來試試一些簡單的 Python 指令。啟動直譯器並等待第一個主提示字元 >>> 出現。（應該不會等太久）"
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 7,
+    "text": "直譯器如同一台簡單的計算機：你可以輸入一個 expression（運算式），它會寫出該式的值。Expression 的語法可以使用：運算子 +、-、* 和 / 可以用來執行運算；括號 () 可以用來分群。例如："
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 8,
+    "text": "整數數字（即 2、4、20）為 int 型別，數字有小數點部份的（即 5.0、1.6）為 float 型別。我們將在之後的教學中看到更多數字相關的型別。"
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 9,
+    "text": "除法 (/) 永遠回傳一個 float。如果要做 floor division 並拿到整數的結果，你可以使用 // 運算子；計算餘數可以使用 %："
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 13,
+    "text": "浮點數的運算有完善的支援，運算子 (operator) 遇上混合的運算元 (operand) 時會把整數的運算元轉換為浮點數："
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 14,
+    "text": "在互動式模式中，最後一個印出的運算式的結果會被指派至變數 _ 中。這表示當你把 Python 當作桌上計算機使用者，要接續計算變得容易許多："
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 15,
+    "text": "這個變數應該被使用者視為只能讀取。不應該明確地為它賦值 --- 你可以創一個獨立但名稱相同的本地變數來覆蓋掉預設變數和它的神奇行為。"
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 16,
+    "text": "除了 int 和 float，Python 還支援了其他的數字型別，包含 Decimal 和 Fraction。Python 亦內建支援複數 (complex numbers)，並使用 j 和 J 後綴來指定虛數的部份（即 3+5j）。"
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 17,
+    "text": "Python 可以操作文本（由 str 型別表示，即所謂的「字串 (strings)」）和數字。這包括字元 \"!\"、單詞 \"rabbit\"、名稱 \"Paris\"、句子 \"Got your back.\" 等等。\"Yay! :)\"。它們可以用單引號 ('...') 或雙引號 (\"...\") 括起來，會具有相同的結果 [2]。"
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 19,
+    "text": "在 Python shell 中，字串定義和輸出字串可能看起來不同。print() 函式透過省略引號並印出跳脫字元和特殊字元來生成更具可讀性的輸出："
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 20,
+    "text": "如果你不希望字元前出現 \\ 就被當成特殊字元時，可以改使用 raw string，在第一個包圍引號前加上 r ："
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 21,
+    "text": "原始字串有一個微妙的地方：原始字串可能不會以奇數個 \\ 字元結尾；請參閱常見問答集來了解更多資訊和解決方法。"
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 22,
+    "text": "字串文本可以跨越數行。其中一方式是使用三個重複引號：\"\"\"...\"\"\" 或 '''...'''。此時換行字元會被自動加入字串值中，但也可以在換行前加入 \\ 來取消這個行為。在以下的例子中，最初的換行符不會被包含："
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 28,
+    "text": "字串可以被「索引 indexed」(下標，即 subscripted)，第一個字元的索引值為 0。沒有獨立表示字元的型別；一個字元就是一個大小為 1 的字串："
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 31,
+    "text": "除了索引外，字串亦支援「切片 slicing」。索引用來拿到單獨的字元，而切片則可以讓你拿到一個子字串 (substring)："
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 32,
+    "text": "切片索引 (slice indices) 有很常用的預設值，省略起點索引值時預設為 0，而省略第二個索引值時預設整個字串被包含在 slice 中："
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 34,
+    "text": "這裡有個簡單記住 slice 是如何運作的方式。想像 slice 的索引值指著字元們之間，其中第一個字元的左側邊緣由 0 計數。則 n 個字元的字串中最後一個字元的右側邊緣會有索引值 n，例如："
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 35,
+    "text": "第一行數字給定字串索引值為 0...6 的位置；第二行則標示了負索引值的位置。由 i 至 j 的 slice 包含了標示 i 和 j 邊緣間的所有字元。"
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 36,
+    "text": "對非負數的索引值而言，一個 slice 的長度等於其索引值之差，如果索引值落在字串邊界內。例如，word[1:3] 的長度是 2。"
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 39,
+    "text": "Python 字串無法被改變 --- 它們是 immutable。因此，嘗試對字串中某個索引位置賦值會產生錯誤："
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 48,
+    "text": "Python 理解數種複合型資料型別，用來組合不同的數值。當中最多樣變化的型別為 list，可以寫成一系列以逗號分隔的數值（稱之元素，即 item），包含在方括號之中。List 可以包合不同型別的元素，但通常這些元素會有相同的型別："
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 51,
+    "text": "不同於字串是 immutable，list 是 mutable 型別，即改變 list 的內容是可能的："
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 52,
+    "text": "你也可以在 list 的最後加入新元素，透過使用 list.append() 方法（我們稍後會看到更多方法的說明）："
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 53,
+    "text": "Python 中的簡單賦值永遠不會複製資料。當你將 list 指派給變數時，該變數會參照現有 list。任何透過一個變數對 list 所做的更改都將能夠透過參照該變數的所有其他變數看到。"
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 54,
+    "text": "所有切片操作都會回傳一個新的 list ，包含要求的元素。這意謂著以下這個切片回傳了原本 list 的淺複製："
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 58,
+    "text": "當然，我們可以用 Python 來處理比 2 加 2 更複雜的工作。例如，我們可以印出費氏數列的首幾項序列："
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 60,
+    "text": "第一行出現了多重賦值：變數 a 與 b 同時得到了新的值 0 與 1。在最後一行同樣的賦值再被使用了一次，示範了等號的右項運算 (expression) 會先被計算 (evaluate)，賦值再發生。右項的運算式由左至右依序被計算。"
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 61,
+    "text": "while 迴圈只要它的條件為真（此範例：a < 10），將會一直重複執行。在 Python 中如同 C 語言，任何非零的整數值為真 (true)；零為假 (false)。條件可以是字串、list、甚至是任何序列型別；任何非零長度的序列為真，空的序列即為假。本例子使用的條件是個簡單的比較。標準的比較運算子 (comparison operators) 使用如同 C 語言一樣的符號：<（小於）、>（大於）、==（等於）、<=（小於等於）、>=（大於等於）以及 !=（不等於）。"
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 62,
+    "text": "迴圈的主體會縮排：縮排在 Python 中用來關連一群陳述式。在互動式提示字元中，你必須在迴圈內的每一行一開始鍵入 tab 或者（數個）空白來維持縮排。實務上，你會先在文字編輯器中準備好比較複雜的輸入；多數編輯器都有自動縮排的功能。當一個複合陳述式以互動地方式輸入，必須在結束時多加一行空行來代表結束（因為語法剖析器無法判斷你何時輸入複合陳述的最後一行）。注意在一個縮排段落內的縮排方式與數量必須維持一致。"
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 63,
+    "text": "print() 函式印出它接收到引數（們）的值。不同於先前僅我們寫下想要的運算（像是先前的計算機範例），它可以處理複數個引數、浮點數數值和字串。印出的字串將不帶有引號，並且不同項目間會插入一個空白，因此可以讓你容易格式化輸出，例如："
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 66,
+    "text": "因為 ** 擁有較 - 高的優先次序，-3**2 會被解釋為 -(3**2) 並得到 -9。如果要避免這樣的優先順序以得到 9，你可以使用 (-3)**2。"
+  },
+  {
+    "doc_id": "introduction.html",
+    "title": "3. 一個非正式的 Python 簡介¶",
+    "paragraph_id": 67,
+    "text": "不像其他語言，特殊符號如 \\n 在單 ('...') 和雙 (\"...\") 引號中有相同的意思。兩種引號的唯一差別，在於使用單引號時，不需要跳脫 \"（但必須跳脫 \\'），反之亦同。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 4,
+    "text": "在陳述式中，可以沒有或有許多個 elif 敘述，且 else 敘述並不是必要的。關鍵字 elif 是「else if」的縮寫，用來避免過多的縮排。一個 if ... elif ... elif ... 序列可以用來替代其他程式語言中的 switch 或 case 陳述式。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 5,
+    "text": "如果你要將同一個值與多個常數進行比較，或者檢查特定的型別或屬性，你可能會發現 match 陳述式也很有用。更多的細節，請參閱 match 陳述式。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 6,
+    "text": "在 Python 中的 for 陳述式有點不同於在 C 或 Pascal 中的慣用方式。相較於只能疊代 (iterate) 一個等差數列（如 Pascal），或給予使用者定義疊代步驟與終止條件（如 C），Python 的 for 陳述式疊代任何序列（list 或者字串）的元素，順序與它們出現在序列中的順序相同。例如（無意雙關）："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 7,
+    "text": "在疊代一個集合的同時修改該集合的內容，很難取得想要的結果。比較直觀的替代方式，是疊代該集合的副本，或建立一個新的集合："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 9,
+    "text": "給定的結束值永遠不會出現在生成的序列中；range(10) 生成的 10 個數值，即對應存取一個長度為 10 的序列內每一個項目的索引值。也可以讓 range 從其他數值開始計數，或者給定不同的公差（甚至為負；有時稱之為 step）："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 13,
+    "text": "在很多情況下，由 range() 回傳的物件表現得像是一個 list（串列）一樣，但實際上它並不是。它是一個在疊代時能夠回傳所要求的序列中所有項目的物件，但它不會真正建出這個序列的 list，以節省空間。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 14,
+    "text": "我們稱這樣的物件為 iterable（可疊代物件），意即能作為函式及架構中可以一直取得項目直到取盡的對象。我們已經了解 for 陳述式就是如此的架構，另一個使用 iterable 的函式範例是 sum()："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 15,
+    "text": "待會我們可以看到更多回傳 iterable 和使用 iterable 為引數的函式。在資料結構章節中，我們會討論更多關於 list() 的細節。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 18,
+    "text": "在 for 或 while 迴圈中，break 陳述句可能與 else 子句配對。如果迴圈完成而沒有執行 break，else 子句會被執行。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 21,
+    "text": "在任何一種迴圈中，如果迴圈由 break 終止，則不會執行 else 子句。當然其他提早結束迴圈的方式（例如 return 或引發例外）也會跳過 else 子句的執行。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 24,
+    "text": "理解 else 子句的一個方法是將它想像成與迴圈內的 if 配對。當迴圈執行時，它會運行如 if/if/if/else 的序列。if 在迴圈內，會遇到多次。如果條件曾經為真，break 就會發生。如果條件從未為真，迴圈外的 else 子句就會執行。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 25,
+    "text": "當 else 子句用於迴圈時，相較於搭配 if 陳述式使用，它的行為與 try 陳述式中的 else 子句更為相似：try 陳述式的 else 子句在沒有發生例外 (exception) 時執行，而迴圈的 else 子句在沒有任何 break 發生時執行。更多有關 try 陳述式和例外的介紹，見處理例外。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 28,
+    "text": "pass 亦可作為一個函式或條件判斷主體的預留位置，在你撰寫新的程式碼時讓你保持在更抽象的思維層次。pass 會直接被忽略："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 29,
+    "text": "在最後這個例子中，許多人會使用刪節號字面值 ... 來取代 pass。這種用法對 Python 並沒有特殊的意義，且並非語言定義的一部分（你也可以在這裡使用任何常數運算式），但 ... 也慣例上被用作預留主體 (placeholder body)。見 Ellipsis 物件。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 30,
+    "text": "match 陳述式會拿取一個運算式，並將其值與多個連續的模式 (pattern) 進行比較，這些模式是以一個或多個 case 區塊來表示。表面上，這類似 C、Java 或 JavaScript（以及許多其他語言）中的 switch 陳述式，但它與 Rust 或 Haskell 等語言中的模式匹配 (pattern matching) 更為相近。只有第一個匹配成功的模式會被執行，而它也可以將成分（序列元素或物件屬性）從值中提取到變數中。如果沒有任何的 case 匹配成功，則不會執行任何的分支。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 31,
+    "text": "最簡單的形式，是將一個主題值 (subject value) 與一個或多個字面值 (literal) 進行比較："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 35,
+    "text": "請仔細研究那個例子！第一個模式有兩個字面值，可以想作是之前所述的字面值模式的延伸。但是接下來的兩個模式結合了一個字面值和一個變數，且該變數繫結 (bind) 了來自主題 (point) 的一個值。第四個模式會擷取兩個值，這使得它在概念上類似於拆解賦值 (x, y) = point。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 36,
+    "text": "如果你要用 class 來結構化你的資料，你可以使用該 class 的名稱加上一個引數列表，類似一個建構式 (constructor)，但它能夠將屬性擷取到變數中："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 37,
+    "text": "你可以將位置參數 (positional parameter) 與一些能夠排序其屬性的內建 class（例如 dataclasses）一起使用。你也可以透過在 class 中設定特殊屬性 __match_args__，來定義模式中屬性們的特定位置。如果它被設定為 (\"x\", \"y\")，則以下的模式都是等價的（且都會將屬性 y 連結到變數 var）："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 38,
+    "text": "理解模式的一種推薦方法，是將它們看作是你會放在賦值 (assignment) 左側內容的一種延伸形式，這樣就可以了解哪些變數會被設為何值。只有獨立的名稱（像是上面的 var）能被 match 陳述式賦值。點分隔名稱（如 foo.bar）、屬性名稱（上面的 x= 及 y=）或 class 名稱（由它們後面的 \"(...)\" 被辨識，如上面的 Point）則永遠無法被賦值。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 39,
+    "text": "模式可以任意地被巢套 (nested)。例如，如果我們有一個由某些點所組成的簡短 list，我們就可以像這樣加入 __match_args__ 來對它進行匹配："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 40,
+    "text": "我們可以在模式中加入一個 if 子句，稱為「防護 (guard)」。如果該防護為假，則 match 會繼續嘗試下一個 case 區塊。請注意，值的擷取會發生在防護的評估之前："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 42,
+    "text": "與拆解賦值的情況類似，tuple（元組）和 list 模式具有完全相同的意義，而且實際上可以匹配任意的序列。一個重要的例外，是它們不能匹配疊代器 (iterator) 或字串。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 43,
+    "text": "序列模式 (sequence pattern) 可支援擴充拆解 (extended unpacking)：[x, y, *rest] 與 (x, y, *rest) 的作用類似於拆解賦值。* 後面的名稱也可以是 _，所以 (x, y, *_) 會匹配一個至少兩項的序列，且不會連結那兩項以外的其餘項。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 44,
+    "text": "對映模式 (mapping pattern)：{\"bandwidth\": b, \"latency\": l} 能從一個 dictionary（字典）中擷取 \"bandwidth\" 及 \"latency\" 的值。與序列模式不同，額外的鍵 (key) 會被忽略。一種像是 **rest 的拆解方式，也是可被支援的。（但 **_ 則是多餘的做法，所以它並不被允許。）"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 47,
+    "text": "大部分的字面值是藉由相等性 (equality) 來比較，但是單例物件 (singleton) True、False 和 None 是藉由標識值 (identity) 來比較。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 48,
+    "text": "模式可以使用附名常數 (named constant)。這些模式必須是點分隔名稱，以免它們被解釋為擷取變數："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 51,
+    "text": "關鍵字 def 介紹一個函式的定義。它之後必須連著該函式的名稱和置於括號之中的一串參數。自下一行起，所有縮排的陳述式成為該函式的主體。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 52,
+    "text": "一個函式的第一個陳述式可以是一個字串文本；該字串文本被視為該函式的說明文件字串，即 docstring。（關於 docstring 的細節請參見說明文件字串 (Documentation Strings)段落。）有些工具可以使用 docstring 來自動產生線上或可列印的文件，或讓使用者能以互動的方式在原始碼中瀏覽文件。在原始碼中加入 docstring 是個好慣例，應該養成這樣的習慣。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 53,
+    "text": "函式執行時會建立一個新的符號表 (symbol table) 來儲存該函式內的區域變數 (local variable)。更精確地說，所有在函式內的變數賦值都會把該值儲存在一個區域符號表。然而，在引用一個變數時，會先從區域符號表開始搜尋，其次為外層函式的區域符號表，其次為全域符號表 (global symbol table)，最後為所有內建的名稱。因此，在函式中，全域變數及外層函式變數雖然可以被引用，但無法被直接賦值（除非全域變數是在 global 陳述式中被定義，或外層函式變數在 nonlocal 陳述式中被定義）。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 54,
+    "text": "在一個函式被呼叫的時候，實際傳入的參數（引數）會被加入至該函式的區域符號表。因此，引數傳入的方式為傳值呼叫 (call by value)（這裡傳遞的值永遠是一個物件的參照 (reference)，而不是該物件的值）。 [1] 當一個函式呼叫別的函式或遞迴呼叫它自己時，在被呼叫的函式中會建立一個新的區域符號表。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 55,
+    "text": "函式定義時，會把該函式名稱加入至目前的符號表。函式名稱的值帶有一個型別，並被直譯器辨識為使用者自定函式 (user-defined function)。該值可以被指定給別的變數名，使該變數名也可以被當作函式使用。這是常見的重新命名方式："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 56,
+    "text": "如果你是來自別的語言，你可能不同意 fib 是個函式，而是個程序 (procedure)，因為它並沒有回傳值。實際上，即使一個函式缺少一個 return 陳述式，它亦有一個固定的回傳值。這個值稱為 None（它是一個內建名稱）。在直譯器中單獨使用 None 時，通常不會被顯示。你可以使用 print() 來看到它："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 59,
+    "text": "return 陳述式會讓一個函式回傳一個值。單獨使用 return 不外加一個運算式作為引數時會回傳 None。一個函式執行到結束也會回傳 None。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 60,
+    "text": "result.append(a) 陳述式呼叫了一個 list 物件 result 的 method（方法）。method 為「屬於」一個物件的函式，命名規則為 obj.methodname，其中 obj 為某個物件（亦可為一運算式），而 methodname 為該 method 的名稱，並由該物件的型別所定義。不同的型別定義不同的 method。不同型別的 method 可以擁有一樣的名稱而不會讓 Python 混淆。（你可以使用 class（類別）定義自己的物件型別和 method，見 Class（類別））範例中的 append() method 定義在 list 物件中；它會在該 list 的末端加入一個新的元素。這個例子等同於 result = result + [a]，但更有效率。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 66,
+    "text": "給予所有引數：ask_ok('OK to overwrite the file?', 2, 'Come on, only yes or no!')"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 70,
+    "text": "重要警告：預設值只求值一次。當預設值為可變物件，例如 list、dictionary（字典）或許多類別實例時，會產生不同的結果。例如，以下函式於後續呼叫時會累積曾經傳遞的引數："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 74,
+    "text": "接受一個必要引數 (voltage) 和三個選擇性引數 (state，action，和 type)。該函式可用下列任一方式呼叫："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 76,
+    "text": "函式呼叫時，關鍵字引數 (keyword argument) 必須在位置引數 (positional argument) 後面。所有傳遞的關鍵字引數都必須匹配一個可被函式接受的引數（actor 不是 parrot 函式的有效引數），而關鍵字引數的順序並不重要。此規則也包括必要引數，（parrot(voltage=1000) 也有效）。一個引數不可多次被賦值，下面就是一個因此限制而無效的例子："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 77,
+    "text": "當最後一個參數為 **name 形式時，它接收一個 dictionary（字典，詳見 Mapping Types --- dict），該字典包含所有可對應形式參數以外的關鍵字引數。**name 可以與 *name 參數（下一小節介紹）組合使用，*name 接收一個 tuple，該 tuple 包含一般參數以外的位置引數（*name 必須出現在 **name 前面）。例如，若我們定義這樣的函式："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 81,
+    "text": "在預設情況，引數能以位置或明確地以關鍵字傳遞给 Python 函式。為了程式的可讀性及效能，限制引數的傳遞方式是合理的，如此，開發者只需查看函式定義，即可確定各項目是按位置，按位置或關鍵字，還是按關鍵字傳遞。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 83,
+    "text": "/ 和 * 是選擇性的。這些符號若被使用，是表明引數被傳遞給函式的參數種類：僅限位置、位置或關鍵字、僅限關鍵字。關鍵字參數也稱為附名參數 (named parameters)。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 85,
+    "text": "此處再詳述一些細節，特定參數可以標記為僅限位置。若參數為僅限位置時，它們的順序很重要，且這些參數不能用關鍵字傳遞。僅限位置參數必須放在 /（斜線）之前。/ 用於在邏輯上分開僅限位置參數與其餘參數。如果函式定義中沒有 /，則表示沒有任何僅限位置參數。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 87,
+    "text": "要把參數標記為僅限關鍵字，表明參數必須以關鍵字引數傳遞，必須在引數列表中第一個僅限關鍵字參數前放上 *。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 89,
+    "text": "第一個函式定義 standard_arg 是我們最熟悉的形式，對呼叫方式沒有任何限制，可以按位置或關鍵字傳遞引數："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 93,
+    "text": "最後，請看這個函式定義，如果 **kwds 內有 name 這個鍵，可能與位置引數 name 產生潛在衝突："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 95,
+    "text": "使用 /（僅限位置引數）後，就可以了。函式定義會允許 name 當作位置引數，而 'name' 也可以當作關鍵字引數中的鍵："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 99,
+    "text": "如果不想讓使用者使用參數名稱，請使用僅限位置。當參數名稱沒有實際意義時，若你想控制引數在函式呼叫的排列順序，或同時使用位置參數和任意關鍵字時，這種方式很有用。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 100,
+    "text": "當參數名稱有意義，且明確的名稱可讓函式定義更易理解，或是你不希望使用者依賴引數被傳遞時的位置時，請使用僅限關鍵字。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 102,
+    "text": "最後，有個較不常用的選項，是規定函式被呼叫時，可以使用任意數量的引數。這些引數會被包裝進一個 tuple 中（詳見 Tuples 和序列 (Sequences)）。在可變數量的引數之前，可能有零個或多個普通引數："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 103,
+    "text": "通常，這些 variadic（可變的）引數會出現在參數列表的最末端，這樣它們就可以把所有傳遞給函式的剩餘輸入引數都撈起來。出現在 *args 參數後面的任何參數必須是「僅限關鍵字」引數，意即它們只能作為關鍵字引數，而不能用作位置引數。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 104,
+    "text": "當引數們已經存在一個 list 或 tuple 裡，但為了滿足一個需要個別位置引數的函式呼叫，而去拆解它們時，情況就剛好相反。例如，內建的 range() 函式要求分開的 start 和 stop 引數。如果這些引數不是分開的，則要在呼叫函式時，用 * 運算子把引數們從 list 或 tuple 中拆解出來："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 106,
+    "text": "lambda 關鍵字用於建立小巧的匿名函式。lambda a, b: a+b 函式回傳兩個引數的和。Lambda 函式可用於任何需要函式物件的地方。在語法上，它們被限定只能是單一運算式。在語義上，它就是一個普通函式定義的語法糖 (syntactic sugar)。與巢狀函式定義一樣，lambda 函式可以從包含它的作用域中引用變數："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 107,
+    "text": "上面的例子用 lambda 運算式回傳了一個函式。另外的用法是傳遞一個小函式當作引數。舉例來說，list.sort() 接受一個鍵排序函式 key，這個函式可以是 lambda 函式："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 109,
+    "text": "第一行都是一段關於此物件目的之簡短摘要。為保持簡潔，不應在這裡明確地陳述物件的名稱或型別，因為有其他方法可以達到相同目的（除非該名稱剛好是一個描述函式運算的動詞）。這一行應以大寫字母開頭，以句號結尾。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 110,
+    "text": "文件字串為多行時，第二行應為空白行，在視覺上將摘要與其餘描述分開。後面幾行可包含一或多個段落，描述此物件的呼叫慣例、副作用等。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 113,
+    "text": "函式註釋是選擇性的元資料（metadata）資訊，描述使用者定義函式所使用的型別（更多資訊詳見 PEP 3107 和 PEP 484）。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 114,
+    "text": "註釋以 dictionary（字典）的形式存放在函式的 __annotations__ 屬性中，且不會影響函式的任何其他部分。參數註釋的定義方式是在參數名稱後加一個冒號，冒號後面跟著一個對註釋求值的運算式。回傳註釋的定義方式是在參數列表和 def 陳述式結尾的冒號中間，用一個 -> 文字接著一個運算式。以下範例註釋了一個必要引數、一個選擇性引數，以及回傳值："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 115,
+    "text": "現在你即將要寫更長、更複雜的 Python 程式，是時候討論一下編碼樣式了。大多數語言都能以不同的樣式被書寫（或更精確地說，被格式化），而有些樣式比其他的更具可讀性。能讓其他人輕鬆閱讀你的程式碼永遠是一個好主意，而使用優良的編碼樣式對此有極大的幫助。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 116,
+    "text": "對於 Python，大多數的專案都遵循 PEP 8 的樣式指南；它推行的編碼樣式相當可讀且賞心悅目。每個 Python 開發者都應該花點時間研讀；這裡是該指南的核心重點："
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 118,
+    "text": "4 個空格是小縮排（容許更大的巢套深度）和大縮排（較易閱讀）之間的折衷方案。Tab 鍵會造成混亂，最好別用。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 125,
+    "text": "Class 和函式的命名樣式要一致；按慣例，命名 class 用 UpperCamelCase（駝峰式大小寫），命名函式與 method 用 lowercase_with_underscores（小寫加底線）。永遠用 self 作為 method 第一個引數的名稱（關於 class 和 method，詳見 初見 class）。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 126,
+    "text": "若程式碼是為了用於國際環境時，不要用花俏的編碼。Python 預設的 UTF-8 或甚至普通的 ASCII，就可以勝任各種情況。"
+  },
+  {
+    "doc_id": "controlflow.html",
+    "title": "4. 深入了解流程控制¶",
+    "paragraph_id": 129,
+    "text": "實際上，傳址呼叫 (call by object reference) 的說法可能較為貼切。因為，若傳遞的是一個可變物件時，呼叫者將看得見被呼叫者對物件做出的任何改變（例如被插入 list 內的新項目）。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 5,
+    "text": "將 iterable（可疊代物件）接到 list 的尾端。與 a[len(a):] = iterable 類似。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 6,
+    "text": "將一個項目插入至 list 中給定的位置。第一個引數為插入處前元素的索引值，所以 a.insert(0, x)  會插入在 list 首位，而 a.insert(len(a), x) 則相當於 a.append(x)。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 7,
+    "text": "Remove the first item from the list whose value is equal to value.  It raises a\nValueError if there is no such item."
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 8,
+    "text": "移除 list 中給定位置的項目，並回傳它。如果沒有指定位置， a.pop() 將會移除 list 中最後的項目並回傳它。若 list 是空的或是索引值超出範圍，則會引發 IndexError 例外。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 10,
+    "text": "Return zero-based index of the first occurrence of value in the list.\nRaises a ValueError if there is no such item."
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 11,
+    "text": "引數 start 和 end 的定義跟在 slice 表示法中相同，搜尋的動作被這兩個引數限定在 list 中特定的子序列。但要注意的是，回傳的索引值是從 list 的開頭開始算，而不是從 start 開始算。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 12,
+    "text": "Return the number of times value appears in the list."
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 17,
+    "text": "你可能會注意到一些方法，像是 insert、remove 或者是 sort，並沒有印出回傳值，事實上，他們回傳預設值 None [1]。這是一個用於 Python 中所有可變資料結構的設計法則。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 18,
+    "text": "另外你可能也會發現，不是所有資料都可以被排序或比較。例如，[None, 'hello', 10] 就不可排序，因為整數不能與字串比較，而 None 不能與其他型別比較。有些型別根本就沒有被定義彼此之間的大小順序，例如，3+4j < 5+7j 就是一個無效的比較。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 19,
+    "text": "List 的操作方法使得它非常簡單可以用來實作 stack（堆疊）。Stack 為一個遵守最後加入元素最先被取回（後進先出，\"last-in, first-out\"）規則的資料結構。你可以使用方法 append() 將一個項目放到堆疊的頂層。而使用方法 pop() 且不給定索引值去取得堆疊最上面的項目。舉例而言："
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 20,
+    "text": "我們也可以將 list 當作 queue（佇列）使用，即最先加入元素最先被取回（先進先出，\"first-in, first-out\"）的資料結構。然而，list 在這種使用方式下效率較差。使用 append 和 pop 來加入和取出尾端的元素較快，而使用 insert 和 pop 來插入和取出頭端的元素較慢（因為其他元素都需要挪動一格）。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 21,
+    "text": "如果要實作 queue，請使用 collections.deque，其被設計成能快速的從頭尾兩端加入和取出。例如："
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 22,
+    "text": "List comprehension（串列綜合運算）讓你可以用簡潔的方法建立 list。常見的應用是基於一個序列或 iterable（可疊代物件），將每一個元素經過某個運算的結果串接起來成為新的 list，或是建立一個子序列，其每一個元素皆滿足一個特定的條件。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 24,
+    "text": "注意這是建立（或覆寫）一個變數叫 x，其在迴圈結束後仍然存在。我們可以這樣產生平方串列而不造成任何 side effects（副作用）："
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 27,
+    "text": "一個 list comprehension 的組成，是在一對方括號內，放入一個 expression（運算式）、一個 for 子句、再接著零個或多個 for 或 if 子句。結果會是一個新的 list，內容是在後面的 for 和 if 子句情境下，對前面運算式求值的結果。例如，這個 list comprehension 組合了兩個 list 中彼此相異的元素："
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 32,
+    "text": "在 list comprehesion 中開頭的 expression 可以是任何形式的 expression，包括再寫一個 list comprehension。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 35,
+    "text": "如同我們在上一節看到的，內部的 list comprehension 會依據後面的 for 環境被求值，所以這個例子就等於："
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 37,
+    "text": "在實際運用上，我們傾向於使用內建函式 (built-in functions) 而不是複雜的流程控制陳述式。在這個例子中，使用 zip() 函式會非常有效率："
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 39,
+    "text": "有一個方法可以藉由索引而不是值來刪除 list 中的項目：del 陳述式。這和 pop() method 傳回一個值不同，del 陳述式可以用來刪除 list 中的片段或者清空整個 list（我們之前藉由指派一個空的 list 給想刪除的片段來完成這件事）。例如："
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 41,
+    "text": "刪除之後，對 a 的參照將會造成錯誤（至少在另一個值又被指派到它之前）。我們將在後面看到更多關於 del 的其他用法。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 42,
+    "text": "我們看到 list 和字串 (string) 有許多共同的特性，像是索引操作 (indexing) 以及切片操作 (slicing) 。他們是序列資料類型中的兩個例子（請參考Sequence Types --- list, tuple, range）。由於 Python 是個持續發展中的語言，未來可能還會有其他的序列資料類型加入。接著要介紹是下一個標準序列資料類型：tuple。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 44,
+    "text": "如同我們看到的，被輸出的 tuple 總是以括號包著，如此巢狀的 tuple 才能被正確的直譯 (interpret)；他們可以是以被括號包著或不被包著的方式當作輸入，雖然括號的使用常常是有其必要的（譬如此 tuple 是一個較大的運算式的一部分）。指派東西給 tuple 中的個別項目是不行的，但是可以建立含有可變物件（譬如 list）的 tuple。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 45,
+    "text": "雖然 tuple 和 list 看起來很類似，但是他們通常用在不同的情況與不同目的。 tuple 是 immutable（不可變的），通常儲存異質的元素序列，並可經由拆解 (unpacking)（請參考本節後段）或索引 (indexing) 來存取（或者在使用 namedtuples 的時候藉由屬性 (attribute) 來存取）。List 是 mutable（可變的），其元素通常是同質的且可藉由疊代整個 list 來存取。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 46,
+    "text": "一個特別的議題是，關於建立一個含有 0 個或 1 個項目的 tuple：語法上會採納一些奇怪的用法。空的 tuple 藉由一對空括號來建立；含有一個項目的 tuple 經由一個值加上一個逗點來建立（用括號把一個單一的值包住是不夠的）。醜，但有效率。例如："
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 47,
+    "text": "陳述式 t = 12345, 54321, 'hello!' 就是一個 tuple packing 的例子：12345，54321 和 'hello!' 一起被放進 tuple 裡。反向操作也可以："
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 48,
+    "text": "這個正是我們所說序列拆解 (sequence unpacking)，可運用在任何位在等號右邊的序列。序列拆解要求等號左邊的變數數量必須與等號右邊的序列中的元素數量相同。注意，多重指派就只是 tuple packing 和序列拆解的結合而已。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 49,
+    "text": "Python 也包含了集合 (sets)的資料型別。Set 是一種無序且不含重複元素的集合。基本的用途包括成員測試和消除重複的項目。集合物件也支援像是聯集、交集、差集和對稱差集等數學運算。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 50,
+    "text": "大括號或 set() 函式都可以用來建立 set。注意：要建立一個空的 set，你必須使用 set() 而不是 {}；後者會建立一個空的 dictionary，一種我們將在下一節討論的資料結構。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 51,
+    "text": "Because sets are unordered, iterating over them or printing them can\nproduce the elements in a different order than you expect."
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 53,
+    "text": "和 list comprehensions 類似，也有 set comprehensions（集合綜合運算）："
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 54,
+    "text": "下一個常用的 Python 內建資料類型為 dictionary（請參考Mapping Types --- dict）。 Dictionary 有時被稱為「關聯記憶體」(associative memories) 或「關聯陣列」(associative arrays)。不像序列是由一個範圍內的數字當作索引，dictionary 是由鍵 (key) 來當索引，鍵可以是任何不可變的類型；字串和數字都可以當作鍵。Tuple 也可以當作鍵，如果他們只含有字串、數字或 tuple；若一個 tuple 直接或間接地含有任何可變的物件，它就不能當作鍵。你無法使用 list 當作鍵，因為 list 可以經由索引指派 (index assignment)、切片指派 (slice assignment) 或是像 append() 和 extend() 等方法被修改。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 55,
+    "text": "思考 dictionary 最好的方式是把它想成是一組鍵值對 (key: value pair) 的 set，其中鍵在同一個 dictionary 裡必須是獨一無二的。使用一對大括號可建立一個空的 dictionary：{}。將一串由逗號分隔的鍵值對置於大括號則可初始化字典的鍵值對。這同樣也是字典輸出時的格式。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 56,
+    "text": "Dictionary 主要的操作為藉由鍵來儲存一個值並且可藉由該鍵來取出該值。也可以使用 del 來刪除鍵值對。如果我們使用用過的鍵來儲存，該鍵所對應的較舊的值會被覆蓋。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 57,
+    "text": "使用下標 (d[key]) 來取出一個不存在的鍵所對應的值會引發 KeyError。為了避免在存取一個可能不存在的鍵時發生這個錯誤，可以改用 get() 方法，如果該鍵不存在於字典中，該方法會回傳 None（或者一個指定的預設值）。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 58,
+    "text": "對 dictionary 使用 list(d) 會得到一個包含該字典所有鍵的 list，其排列順序為插入時的順序。（若想要排序，則使用 sorted(d) 代替即可）。如果想確認一個鍵是否已存在於字典中，可使用關鍵字 in。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 61,
+    "text": "此外，dict comprehensions 也可以透過任意鍵與值的運算式來建立 dictionary ："
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 63,
+    "text": "當對 dictionary 作迴圈時，鍵以及其對應的值可以藉由使用 items() method 來同時取得："
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 67,
+    "text": "要以迴圈對序列作排序，使用 sorted() 函式會得到一個新的經排序過的 list ，但不會改變原本的序列："
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 68,
+    "text": "對序列使用 set() 可去除重複元素。對序列使用 sorted() 加上 set()，則是對經過排序後的非重複元素跑迴圈的慣用方法："
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 70,
+    "text": "使用在 while 和 if 陳述式的條件句可以包含任何運算子，而不是只有比較運算子 (comparisons) 。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 71,
+    "text": "比較運算子 in 和 not in 用於隸屬資格檢測，在容器中檢查一個值是否存在（或不存在）。運算子 is 和 is not 比較兩個物件是否真的是相同的物件。所有比較運算子的優先度都相同且都低於數值運算子。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 72,
+    "text": "比較運算是可以串連在一起的。例如， a < b == c 就是在測試 a 是否小於 b 和 b 是否等於 c。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 73,
+    "text": "比較運算可以結合布林運算子 and 和 or，且一個比較運算的結果（或任何其他布林運算式）可以加上 not 來否定。這些運算子的優先度都比比較運算子還低，其中，not 的優先度最高，or 的優先度最低，因此 A and not B or C 等同於 (A and (not B)) or C。一如往常，括號可以用來表示任何想要的組合。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 74,
+    "text": "布林運算子 and 和 or 也被稱為短路 (short-circuit) 運算子：會將其引數從左至右進行運算，當結果出現時即結束運算。例如，若 A 和 C 為真但 B 為假，則 A and B and C 的運算並不會執行到 C。當運算結果被當成一般值而非布林值時，短路運算子的回傳值為最後被求值的引數。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 76,
+    "text": "注意，Python 與 C 語言不一樣，在運算式裡進行指派必須外顯地使用海象運算子 :=。 這樣做避免了在 C 語言裡常見的一種問題：想要打 == 卻在運算式裡輸入 =。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 77,
+    "text": "序列物件通常可以拿來和其他相同類型的物件做比較。這種比較使用詞典式 (lexicographical) 順序：首先比較各自最前面的那項，若不相同，便可決定結果；若相同，則比較下一項，以此類推，直到其中一個序列完全用完。如果被拿出來比較的兩項本身又是相同的序列類型，則詞典式比較會遞迴地執行。如果兩個序列所有的項目都相等，則此兩個序列被認為是相等的。如果其中一個序列是另一個的子序列，則較短的那個序列為較小的序列。字串的詞典式順序使用 Unicode 的編碼位置 (code point) 編號來排序個別字元。以下是一些相同序列類型的比較："
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 78,
+    "text": "注意，若使用 < 或 > 來比較不同類型的物件是合法的，表示物件擁有適當的比較方法。例如，混合的數值類型是根據它們數值來做比較，所以 0 等於 0.0，等等。否則直譯器會選擇丟出一個 TypeError 錯誤而不是提供一個任意的排序。"
+  },
+  {
+    "doc_id": "datastructures.html",
+    "title": "5. 資料結構¶",
+    "paragraph_id": 80,
+    "text": "其他語言可以回傳變更後的物件，這就允許 method 的串連，例如 d->insert(\"a\")->remove(\"b\")->sort();。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 2,
+    "text": "如果從 Python 直譯器離開後又再次進入，之前（幫函式或變數）做的定義都會消失。因此，想要寫一些比較長的程式時，你最好使用編輯器來準備要輸入給直譯器的內容，並且用該檔案來運行它。這就是一個腳本 (script)。隨著你的程式越變越長，你可能會想要把它分開成幾個檔案，讓它比較好維護。你可能也會想用一個你之前已經在其他程式寫好的函式，但不想要複製該函式的原始定義到所有使用它的程式裡。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 3,
+    "text": "為了支援這一點，Python 有一種方法可以將定義放入檔案中，並在互動模式下的直譯器中使用它們。這種檔案稱為模組 (module)；模組中的定義可以被 import 到其他模組中，或是被 import 至主 (main) 模組（在最頂層執行的腳本，以及互動模式下，所使用的變數集合）。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 4,
+    "text": "模組是指包含 Python 定義和語句的檔案，檔案名稱是模組名稱加上 .py。在模組中，模組的名稱（作為字串）會是全域變數 __name__ 的值。例如，用你喜歡的文字編輯器在資料夾中創一個名為 fibo.py 的檔案，內容如下："
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 6,
+    "text": "這並不會將 fibo 中定義的函式名稱直接加入目前的 namespace 中（詳情請見 Python 作用域 (Scope) 及命名空間 (Namespace)）；它只會加入 fibo 的模組名稱。使用此模組名稱，就可以存取函式："
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 8,
+    "text": "模組可以包含可執行的陳述式以及函式的定義。這些陳述式是作為模組的初始化，它們只會在第一次被 import 時才會執行。[1]（如果檔案被當成腳本執行，也會執行它們）。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 9,
+    "text": "每個模組都有它自己的私有命名空間 (namespace)，模組內定義的函式會把該模組的私有符號表當成全域命名空間使用。因此，模組的作者可以在模組中使用全域變數，而不必擔心和使用者的全域變數發生意外的名稱衝突。另一方面，如果你知道自己在做什麼，你可以用這個方式取用模組的全域變數，以和引用函式一樣的寫法，modname.itemname。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 10,
+    "text": "在一個模組中可以 import 其他模組。把所有的 import 陳述式放在模組（就這邊來說，腳本也是一樣）的最開頭是個慣例，但並沒有強制。如放置在模組的最高層（不在任何函式或 class 中），被 import 的模組名稱將被加入全域命名空間中。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 11,
+    "text": "import 陳述式有另一種變形寫法，可以直接將名稱從欲 import 的模組，直接 import 至原模組的命名空間中。例如："
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 12,
+    "text": "在 import 之後的名稱會被導入，但定義該函式的整個模組名稱並不會被引入在區域命名空間中（因此，示例中的 fibo 未被定義）。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 14,
+    "text": "這個寫法會 import 模組中所有的名稱，除了使用底線 (_) 開頭的名稱。大多數情況下，Python 程式設計師不大使用這個功能，因為它在直譯器中引入了一組未知的名稱，並且可能覆蓋了某些你已經定義的內容。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 15,
+    "text": "請注意，一般情況下並不建議從模組或套件中 import * 的做法，因為它通常會導致可讀性較差的程式碼。但若是使用它來在互動模式中節省打字時間，則是可以接受的。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 17,
+    "text": "這個 import 方式和 import fibo 實質上是一樣的，唯一的差別是現在要用 fib 使用模組。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 20,
+    "text": "出於效率原因，每個模組在每個直譯器 session 中僅會被 import 一次。因此，如果你更改了模組，則必須重啟直譯器——或者，如果只是一個想要在互動模式下測試的模組，可以使用 importlib.reload()。例如：import importlib; importlib.reload(modulename)。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 22,
+    "text": "如同使用 import 指令，模組中的程式碼會被執行，但 __name__ 被設為 \"__main__\"。這意味著，透過在模組的末尾添加以下程式碼："
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 23,
+    "text": "你可以將檔案作為腳本也同時可以作為被 import 的模組，因為剖析 (parse) 命令列的程式碼只會在當模組是「主」檔案時，才會執行："
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 26,
+    "text": "Import 一個名為 spam 的模組時，直譯器首先會搜尋具有該名稱的內建模組。模組名稱列在 sys.builtin_module_names 當中。如果找不到，接下來會在變數 sys.path 所給定的資料夾清單之中，搜尋一個名為 spam.py 的檔案。sys.path 從這些位置開始進行初始化："
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 29,
+    "text": "與安裝相關的預設值（按慣例會包含一個 site-packages 資料夾，它是由 site 模組所處理）。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 32,
+    "text": "在支援符號連結 (symlink) 的檔案系統中，輸入腳本的所在資料夾是在跟隨符號連結之後才被計算的。換言之，包含符號連結的資料夾並沒有增加到模組的搜尋路徑中。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 33,
+    "text": "初始化之後，Python 程式可以修改 sys.path。執行中腳本的所在資料夾會在搜尋路徑的開頭，在標準函式庫路徑之前。這代表該資料夾中的腳本會優先被載入，而不是函式庫資料夾中相同名稱的模組。除非是有意要做這樣的替換，否則這是一個錯誤。 請參見標準模組以瞭解更多資訊。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 34,
+    "text": "為了加快載入模組的速度，Python 將每個模組的編譯版本暫存在 __pycache__ 資料夾下，並命名為 module.version.pyc， 這裡的 version 是編譯後的檔案的格式名稱，且名稱通常會包含 Python 的版本編號。例如，在 CPython 3.3 中，spam.py 的編譯版本將被暫存為 __pycache__/spam.cpython-33.pyc。此命名準則可以讓來自不同版本的編譯模組和 Python 的不同版本同時共存。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 35,
+    "text": "Python 根據原始碼最後修改的日期，檢查編譯版本是否過期而需要重新編譯。這是一個完全自動的過程。另外，編譯後的模組獨立於平台，因此不同架構的作業系統之間可以共用同一函式庫。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 36,
+    "text": "Python 在兩種情況下不檢查快取 (cache)。首先，它總是重新編譯且不儲存直接從命令列載入的模組的結果。第二，如果沒有源模組，則不會檢查快取。要支援非源模組（僅編譯）的發布，編譯後的模組必須位於原始資料夾中，並且不能有源模組。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 38,
+    "text": "可以在 Python 指令上使用開關參數 (switch) -O 或 -OO 來減小已編譯模組的大小。開關參數 -O 刪除 assert（斷言）陳述式，而 -OO 同時刪除 assert 陳述式和 __doc__ 字串。由於有些程式可能依賴於上述這些內容，因此只有在你知道自己在做什麼時，才應使用此參數。「已最佳化」模組有 opt- 標記，且通常較小。未來的版本可能會改變最佳化的效果。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 42,
+    "text": "Python 附帶了一個標準模組庫，詳細的介紹在另一份文件，稱為「Python 函式庫參考手冊」（簡稱為「函式庫參考手冊」）。有些模組是直譯器中內建的；它們使一些不屬於語言核心但依然內建的運算得以存取，其目的是為了提高效率，或提供作業系統基本操作（例如系統呼叫）。這些模組的集合是一個組態選項，它們取決於底層平台。例如：winreg 模組僅供 Windows 使用。值得注意的模組是 sys，它被內建在每個 Python 直譯器中。變數 sys.ps1 和 sys.ps2 則用來定義主、次提示字元的字串："
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 44,
+    "text": "變數 sys.path 是一個字串 list，它決定直譯器的模組搜尋路徑。它的初始值為環境變數 PYTHONPATH 中提取的預設路徑，或是當 PYTHONPATH 未設定時，從內建預設值提取。你可以用標準的 list 操作修改該變數："
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 48,
+    "text": "dir() 不會列出內建函式和變數的名稱。如果你想要列出它們，它們被定義在標準模組 builtins 內："
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 49,
+    "text": "套件是一種使用「點分隔模組名稱」組織 Python 模組命名空間的方法。例如，模組名稱 A.B 表示套件 A 中名為 B 的子模組。正如模組使用時，不同模組的作者不需擔心與其他模組的全域變數名稱重複，點分隔模組名稱的使用，也讓多模組套件（像 NumPy 或 Pillow）的作者們不須擔心其他套件的模組名稱。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 50,
+    "text": "假設你想設計一個能統一處理音訊檔案及音訊數據的模組集（「套件」）。因為音訊檔案有很多的不同的格式（通常以它們的副檔名來辨識，例如：.wav、.aiff、.au），因此，為了不同檔案格式之間的轉換，你會需要建立和維護一個不斷增長的模組集合。為了要達成對音訊數據的許多不同作業（例如，音訊混合、增加回聲、套用等化器功能、創造人工立體音效），你將編寫一系列無止盡的模組來執行這些作業。以下是你的套件可能的架構（以階層式檔案系統的方式表示）："
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 52,
+    "text": "目錄中必須含有 __init__.py 檔案，才會被 Pyhon 當成套件（除非有使用 namespace package，為一個相對進階的功能）；這樣可以避免一些以常用名稱命名（例如 string）的目錄，無意中隱藏了較晚出現在模組搜尋路徑中的有效模組。在最簡單的情況，__init__.py 可以只是一個空白檔案；但它也可以執行套件的初始化程式碼，或設置 __all__ 變數，之後會詳述。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 59,
+    "text": "請注意，使用 from package import item 時，item 可以是套件的子模組（或子套件），也可以是套件中被定義的名稱，像是函式、class （類別）或變數。import 陳述式首先測試套件中有沒有定義該 item；如果沒有，則會假設它是模組，並嘗試載入。如果還是找不到 item，則會引發 ImportError 例外。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 60,
+    "text": "相反地，使用 import item.subitem.subsubitem 語法時，除了最後一項之外，每一項都必須是套件；最後一項可以是模組或套件，但不能是前一項中定義的 class、函式或變數。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 61,
+    "text": "當使用者寫下 from sound.effects import * 時，會發生什麼事？理想情況下，我們可能希望程式碼會去檔案系統，尋找套件中存在的子模組，並將它們全部 import。這會花費較長的時間，且 import 子模組的過程可能會有不必要的副作用，這些副作用只有在明確地 import 子模組時才會發生。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 62,
+    "text": "唯一的解法是由套件作者為套件提供明確的索引。import 陳述式使用以下慣例：如果套件的 __init__.py 程式碼有定義一個名為 __all__ 的 list，若遇到 from package import * 的時候，它就會是要被 import 的模組名稱。發布套件的新版本時，套件作者可自行決定是否更新此 list。如果套件作者認為沒有人會從他的套件中 import *，他也可能會決定不支援這個 list。舉例來說，sound/effects/__init__.py 檔案可包含以下程式碼："
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 63,
+    "text": "意思是，from sound.effects import * 將會 import sound.effects 套件中，這三個被提名的子模組。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 64,
+    "text": "請注意，子模組可能會被區域定義 (locally defined) 的名稱遮蔽。例如，如果你在 sound/effects/__init__.py 檔案中新增了一個 reverse 函式，則 from sound.effects import * 只會引入兩個子模組 echo 和 surround，但不是 reverse 子模組，因為它被區域定義的 reverse 函式遮蔽了："
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 65,
+    "text": "如果 __all__ 沒有被定義，from sound.effects import * 陳述式並不會把 sound.effects 套件中所有子模組都 import 到目前的命名空間；它只保證 sound.effects 套件有被 import（可能會運行 __init__.py 中的初始化程式碼），然後 import 套件中被定義的全部名稱。這包含 __init__.py 定義（以及被明確載入的子模組）的任何名稱。它也包括任何之前被 import 陳述式明確載入的套件子模組。請看以下程式碼："
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 66,
+    "text": "此例中，當 from...import 陳述式被執行時，echo 和 surround 模組被 import 進目前的命名空間，因為它們是在 sound.effects 套件裡定義的。（當 __all__ 有被定義時，這規則也有效。）"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 67,
+    "text": "雖然，有些特定模組的設計，讓你使用 import * 時，該模組只會輸出遵循特定樣式的名稱，但在正式環境 (production) 的程式碼中這仍然被視為是不良習慣。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 68,
+    "text": "記住，使用 from package import specific_submodule 不會有任何問題！實際上，這是推薦用法，除非 import 的模組需要用到的子模組和其他套件的子模組同名。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 69,
+    "text": "當套件的結構為多個子套件的組合時（如同範例中的 sound 套件），可以使用「絕對 (absolute) import」，引用同層套件中的子模組。例如，要在 sound.filters.vocoder 模組中使用 sound.effects 中的 echo 模組時，可以用 from sound.effects import echo。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 70,
+    "text": "你也可以用 from module import name 的 import 陳述式，編寫「相對 (relative) import」。這些 import 使用前導句號指示相對 import 中的目前套件和母套件。例如，在 urround 模組中，你可以使用："
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 71,
+    "text": "請注意，相對 import 的運作是以目前模組的套件名稱為依據。因為主模組並沒有套件，所以如果一個模組預期被用作 Python 應用程式的主模組，那它必須永遠使用絕對引入。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 72,
+    "text": "套件也支援一個特殊屬性 __path__。它在初始化時是一個字串的序列的 __init__.py 檔案所在的目錄名稱，初始化時機是在這個檔案的程式碼被執行之前。這個變數可以被修改，但這樣做會影響將來對套件內的模組和子套件的搜尋。"
+  },
+  {
+    "doc_id": "modules.html",
+    "title": "6. 模組 (Module)¶",
+    "paragraph_id": 75,
+    "text": "實際上，函式定義也是「被執行」的「陳述式」；在執行模組階層的函式定義時，會將函式名稱加到模組的全域命名空間。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 2,
+    "text": "有數種方式可以顯示程式的輸出；資料可以以人類易讀的形式印出，或是寫入檔案以供未來所使用。這章節會討論幾種不同的方式。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 3,
+    "text": "目前為止我們已經學過兩種寫值的方式：運算式陳述 (expression statements) 與 print() 函式。（第三種方法是使用檔案物件的 write() 方法；標準輸出的檔案是使用 sys.stdout 來達成的。詳細的資訊請參考對應的函式庫說明。）"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 5,
+    "text": "要使用格式化字串文本 (formatted string literals)，需在字串開始前的引號或連續三個引號前加上 f 或 F。你可以在這個字串中使用 { 與 } 包夾 Python 的運算式，引用變數或其他字面值 (literal values)。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 6,
+    "text": "字串的 str.format() method 需要更多手動操作。你還是可以用 { 和 } 標示欲替代變數的位置，且可給予詳細的格式指令，但你也需提供要被格式化的資訊。在以下程式碼區塊中，有兩個如何格式化變數的範例："
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 7,
+    "text": "請注意 yes_votes 如何對於負數用空格和負號填補。該範例還會列出 percentage 乘以 100，並保留 2 位小數且後面跟著一個百分號（有關詳細資訊，請參閱 Format specification mini-language）。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 8,
+    "text": "最後，你還可以自己用字串切片 (slicing) 和串接 (concatenation) 操作，完成所有的字串處理，建立任何你能想像的排版格式。字串型別有一些 method，能以給定的欄寬填補字串，這些運算也很有用。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 9,
+    "text": "如果你不需要華麗的輸出，只想快速顯示變數以進行除錯，可以用 repr() 或 str() 函式把任何的值轉換為字串。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 10,
+    "text": "str() 函式的用意是回傳一個人類易讀的表示法，而 repr() 的用意是產生直譯器可讀取的表示法（如果沒有等效的語法，則造成 SyntaxError）。如果物件沒有人類易讀的特定表示法，str() 會回傳與 repr() 相同的值。有許多的值，像是數字，或 list 及 dictionary 等結構，使用這兩個函式會有相同的表示法。而字串，則較為特別，有兩種不同的表示法。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 12,
+    "text": "string 模組包含一個基於正規表示式 (regular expressions)、透過 string.Template 的簡單模板化手段的支援。這提供了另一種將值替換到字串中的方式，使用像 $x 這樣的佔位符號，並用來自字典的值取代它們。這種語法較易用，但它在格式化方面提供的控制較少。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 13,
+    "text": "格式化的字串文本（簡稱為 f-字串），透過在字串加入前綴 f 或 F，並將運算式編寫為 {expression}，讓你可以在字串內加入 Python 運算式的值。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 14,
+    "text": "格式說明符 (format specifier) 是選擇性的，寫在運算式後面，可以更好地控制值的格式化方式。以下範例將 pi 捨入到小數點後三位："
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 16,
+    "text": "還有一些修飾符號可以在格式化前先將值轉換過。'!a' 會套用 ascii()，'!s' 會套用 str()，'!r' 會套用 repr()："
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 17,
+    "text": "= 說明符可用於將一個運算式擴充為該運算式的文字、一個等號、以及對該運算式求值 (evaluate) 後的表示法："
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 18,
+    "text": "更多關於 = 說明符的資訊請見自文件性運算式 (self-documenting expressions)。若要參考這些格式化字串的規格，詳見 Format specification mini-language 參考指南。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 20,
+    "text": "大括號及其內的字元（稱為格式欄位）會被取代為傳遞給 str.format() method 的物件。大括號中的數字表示該物件在傳遞給 str.format() method 時所在的位置。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 23,
+    "text": "如果你有一個不想分割的長格式化字串，比較好的方式是按名稱而不是按位置來引用變數。這項操作可以透過傳遞字典 (dict)，並用方括號 '[]' 使用鍵 (key) 來輕鬆完成。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 25,
+    "text": "與內建函式 vars() 組合使用時，這種方式特別實用。該函式可以回傳一個包含所有區域變數的 dictionary："
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 27,
+    "text": "關於使用 str.format() 進行字串格式化的完整概述，請見Format string syntax。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 30,
+    "text": "字串物件的 str.rjust() method 透過在左側填補空格，使字串以給定的欄寬進行靠右對齊。類似的 method 還有 str.ljust() 和 str.center()。這些 method 不寫入任何內容，只回傳一個新字串，如果輸入的字串太長，它們不會截斷字串，而是不做任何改變地回傳；雖然這樣會弄亂欄的編排，但這通常還是比另一種情況好，那種情況會讓值變得不正確。（如果你真的想截斷字串，可以加入像 x.ljust(n)[:n] 這樣的切片運算。）"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 32,
+    "text": "% 運算子（modulo，模數）也可用於字串格式化。在 format % values 中（其中 format 是個字串），format 內的 % 轉換規格會被 values 的零個或多個元素所取代。此運算常被稱為字串插值 (string interpolation)。例如："
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 34,
+    "text": "open() 回傳一個 file object，而它最常使用的兩個位置引數和一個關鍵字引數是：open(filename, mode, encoding=None)"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 35,
+    "text": "第一個引數是一個包含檔案名稱的字串。第二個引數是另一個字串，包含了描述檔案使用方式的幾個字元。mode 為 'r' 時，表示以唯讀模式開啟檔案；為 'w' 時，表示以唯寫模式開啟檔案（已存在的同名檔案會被抹除）；為 'a' 時，以附加內容為目的開啟檔案，任何寫入檔案的資料會自動被加入到檔案的結尾。'r+' 可以開啟檔案並進行讀取和寫入。mode 引數是選擇性的，若省略時會預設為 'r'。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 36,
+    "text": "通常，檔案以 text mode 開啟，意即，從檔案中讀取或寫入字串時，都以特定編碼方式 encoding 進行編碼。如未指定 encoding，則預設值會取決於系統平台（見 open()）。因為 UTF-8 是現時的標準，除非你很清楚該用什麼編碼，否則推薦使用 encoding=\"utf-8\"。在 mode 後面加上 'b' 會以 binary mode（二進制模式）開啟檔案，二進制模式資料以 bytes 物件的形式被讀寫。以二進制模式開啟檔案時不可以指定 encoding。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 37,
+    "text": "在文字模式 (text mode) 下，讀取時會預設把平台特定的行尾符號（Unix 上為 \\n，Windows 上為 \\r\\n）轉換為 \\n。在文字模式下寫入時，預設會把 \\n 出現之處轉換回平台特定的行尾符號。這種在幕後對檔案資料的修改方式對文字檔案來說沒有問題，但會毀壞像是 JPEG 或 EXE 檔案中的二進制資料。在讀寫此類檔案時，注意一定要使用二進制模式。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 38,
+    "text": "在處理檔案物件時，使用 with 關鍵字是個好習慣。優點是，當它的套件結束後，即使在某個時刻引發了例外，檔案仍會正確地被關閉。使用 with 也比寫等效的 try-finally 區塊，來得簡短許多："
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 39,
+    "text": "如果你沒有使用 with 關鍵字，則應呼叫 f.close() 關閉檔案，可以立即釋放被它所使用的系統資源。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 41,
+    "text": "呼叫 f.write() 時，若未使用 with 關鍵字或呼叫 f.close()，即使程式成功退出，也可能導致 f.write() 的引數沒有被完全寫入硬碟。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 42,
+    "text": "不論是透過 with 陳述式，或呼叫 f.close() 關閉一個檔案物件之後，嘗試使用該檔案物件將會自動失效。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 44,
+    "text": "要讀取檔案的內容，可呼叫 f.read(size)，它可讀取一部份的資料，並以字串（文字模式）或位元組串物件（二進制模式）形式回傳。size 是個選擇性的數字引數。當 size 被省略或為負數時，檔案的全部內容會被讀取並回傳；如果檔案是機器記憶體容量的兩倍大時，這會是你的問題。否則，最多只有等同於 size 數量的字元（文字模式）或 size 數量的位元組串（二進制模式）會被讀取及回傳。如果之前已經到達檔案的末端，f.read() 會回傳空字串（''）。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 45,
+    "text": "f.readline() 從檔案中讀取單獨一行；換行字元（\\n）會被留在字串的結尾，只有當檔案末端不是換行字元時，它才會在檔案的最後一行被省略。這種方式讓回傳值清晰明確；只要 f.readline() 回傳一個空字串，就表示已經到達了檔案末端，而空白行的表示法是 '\\n'，也就是只含一個換行字元的字串。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 47,
+    "text": "如果你想把一個檔案的所有行讀進一個 list 裡，可以用 list(f) 或 f.readlines()。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 50,
+    "text": "f.tell() 回傳一個整數，它給出檔案物件在檔案中的目前位置，在二進制模式下表示為檔案開始至今的位元組數，在文字模式下表示為一個意義不明的數字。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 51,
+    "text": "使用 f.seek(offset, whence) 可以改變檔案物件的位置。位置計算方法是從一個參考點增加 offset 的偏移量；參考點則由引數 whence 來選擇。當 whence 值為 0 時，表示使用檔案開頭，1 表示使用目前的檔案位置，2 表示使用檔案末端作為參考點。whence 可省略，其預設值為 0，即以檔案開頭作為參考點。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 52,
+    "text": "在文字檔案（開啟時模式字串未加入 b 的檔案）中，只允許以檔案開頭為參考點進行尋找（但 seek(0, 2) 尋找檔案最末端是例外），且只有從 f.tell() 回傳的值，或是 0，才是有效的 offset 值。其他任何 offset 值都會產生未定義的行為。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 53,
+    "text": "檔案物件還有一些附加的 method，像是較不常使用的 isatty() 和 truncate()；檔案物件的完整指南詳見程式庫參考手冊。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 54,
+    "text": "字串可以簡單地從檔案中被寫入和讀取。數字則稍嫌麻煩，因為 read() method 只回傳字串，這些字串必須傳遞給像 int() 這樣的函式，它接受 '123' 這樣的字串，並回傳數值 123。當你想儲存像是巢狀 list 和 dictionary（字典）等複雜的資料類型時，手動剖析 (parsing) 和序列化 (serializing) 就變得複雜。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 55,
+    "text": "相較於讓使用者不斷地編寫和除錯程式碼才能把複雜的資料類型儲存到檔案，Python 支援一個普及的資料交換格式，稱為 JSON (JavaScript Object Notation)。標準模組 json 可接收 Python 資料階層，並將它們轉換為字串表示法；這個過程稱為 serializing（序列化）。從字串表示法中重建資料則稱為 deserializing（反序列化）。在序列化和反序列化之間，表示物件的字串可以被儲存在檔案或資料中，或透過網路連接發送到遠端的機器。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 57,
+    "text": "JSON 格式經常地使用於現代應用程式的資料交換。許多程序設計師早已對它耳熟能詳，使它成為提升互操作性 (interoperability) 的好選擇。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 59,
+    "text": "dumps() 函式有一個變體，稱為 dump()，它單純地將物件序列化為 text file。因此，如果 f 是一個為了寫入而開啟的 text file 物件，我們可以這樣做："
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 60,
+    "text": "若 f 是一個已開啟、可讀取的 binary file 或 text file 物件，要再次解碼物件的話："
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 62,
+    "text": "JSON 檔案必須以 UTF-8 格式編碼。在開啟 JSON 檔案以作為一個可讀取與寫入的 text file 時，要用 encoding=\"utf-8\"。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 63,
+    "text": "這種簡單的序列化技術可以處理 list 和 dictionary，但要在 JSON 中序列化任意的 class（類別）實例，則需要一些額外的工作。json 模組的參考資料包含對此的說明。"
+  },
+  {
+    "doc_id": "inputoutput.html",
+    "title": "7. 輸入和輸出¶",
+    "paragraph_id": 66,
+    "text": "與 JSON 不同，pickle 是一種允許對任意的複雜 Python 物件進行序列化的協定。因此，它為 Python 所特有，不能用於與其他語言編寫的應用程式溝通。在預設情況，它也是不安全的：如果資料是由手段高明的攻擊者精心設計，將這段來自於不受信任來源的 pickle 資料反序列化，可以執行任意的程式碼。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 2,
+    "text": "到目前為止還沒有提到錯誤訊息，但如果你嘗試運行範例，你可能會發現一些錯誤訊息。常見的（至少）兩種不同的錯誤類別為：語法錯誤 (syntax error) 和例外 (exception)。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 3,
+    "text": "語法錯誤又稱剖析錯誤 (parsing error)，它或許是學習 Python 的過程最常聽見的抱怨："
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 4,
+    "text": "剖析器 (parser) 會重複犯錯的那一行，並用一個小箭頭指向該行檢測到錯誤的地方，但請注意這並非都會是應該去修改的地方。此例中，錯誤是在 print() 函式中被檢測到，因為在它前面少了一個冒號 (':')。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 5,
+    "text": "檔案名稱（此例中為 <stdin>）和列號會被印出來，所以如果訊息是來自一個檔案時，就可以知道去哪裡找問題。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 6,
+    "text": "即使一段陳述式或運算式使用了正確的語法，嘗試執行時仍可能導致錯誤。執行時檢測到的錯誤稱為例外，例外不一定都很嚴重：你很快就能學會在 Python 程式中如何處理它們。不過大多數的例外不會被程式處理，並且會顯示如下的錯誤訊息："
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 7,
+    "text": "錯誤訊息的最後一行指示發生了什麼事。例外有不同的類型，而類型名稱會作為訊息的一部份被印出。範例中的例外類型為：ZeroDivisionError、NameError 和 TypeError。作為例外類型被印出的字串，就是發生的內建例外 (built-in exception) 的名稱。所有的內建例外都是如此運作，但對於使用者自定的例外則不一定需要遵守（雖然這是一個有用的慣例）。標準例外名稱是內建的識別字 (identifier)，不是保留關鍵字 (reserved keyword)。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 9,
+    "text": "錯誤訊息的開頭，用堆疊回溯 (stack traceback) 的形式顯示發生例外的語境。一般來說，它含有一個列出源程式碼行 (source line) 的堆疊回溯；但它不會顯示從標準輸入中讀取的程式碼。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 11,
+    "text": "編寫程式處理選定的例外是可行的。以下範例會要求使用者輸入內容，直到有效的整數被輸入為止，但它允許使用者中斷程式（使用 Control-C 或作業系統支援的指令）；請注意，由使用者產生的程式中斷會引發 KeyboardInterrupt 例外信號。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 15,
+    "text": "如果執行 try 子句時發生了例外，則該子句中剩下的部分會被跳過。如果例外的類型與 except 關鍵字後面的例外名稱相符，則 except 子句被執行，然後，繼續執行 try/except 區塊之後的程式碼。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 16,
+    "text": "如果發生的例外未符合 except 子句 中的例外名稱，則將其傳遞到外層的 try 陳述式；如果仍無法找到處理者，則它是一個未處理例外 (unhandled exception)，執行將停止，並顯示錯誤訊息。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 17,
+    "text": "A try statement may have more than one except clause, to specify\nhandlers for different exceptions.  At most one handler will be executed.\nHandlers only handle exceptions that occur in the corresponding try clause,\nnot in other handlers of the same try statement.  An except clause\nmay name multiple exceptions, for example:"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 18,
+    "text": "except 子句中的一個類別符合該類別本身或它的衍生類別的例外（但不是反過來 -- 列出一個衍生類別的 except 子句不會符合它的基底類別的例外）。例如，以下程式碼會按照 B、C、D 的順序印出："
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 19,
+    "text": "請注意，如果 except 子句的順序被反轉（把 except B 放到第一個），則會印出 B、B、B ­­——第一個符合的 except 子句會被觸發。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 21,
+    "text": "except 子句可以在例外名稱後面指定一個變數。這個變數被綁定到一個例外實例 (instance)，其引數通常儲存在 args 屬性中。為了方便，內建例外型別定義了 __str__() 以印出所有引數而不需顯式地取用 .args："
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 23,
+    "text": "BaseException 是由全部的例外所共用的 base class。它的 subclass（子類別）之一，Exception，則是所有非嚴重例外 (non-fatal exception) 的 base class。有些例外不是 Exception 的 subclass，而它們通常不會被處理，因為它們是用來指示程式應該終止。這些例外包括了由 sys.exit() 所引發的 SystemExit，以及當使用者想要中斷程式時所引發的 KeyboardInterrupt。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 24,
+    "text": "Exception 可以用作通配符 (wildcard) 來捕獲（幾乎）所有的例外。然而，比較好的做法是盡可能具體地說明我們打算處理的例外類型，並容許任何非預期例外的傳遞 (propagate)。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 25,
+    "text": "處理 Exception 的最常見模式，是先將該例外印出或記錄，然後再重新引發它（也允許一個呼叫函式 (caller) 來處理該例外）："
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 26,
+    "text": "try ... except 陳述式有一個選擇性的 else 子句，使用時，該子句必須放在所有 except 子句之後。如果一段程式碼必須被執行，但 try 子句又沒有引發例外時，這個子句很有用。例如："
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 27,
+    "text": "使用 else 子句比向 try 子句添加額外的程式碼要好，因為這可以避免意外地捕獲不是由 try ... except 陳述式保護的程式碼所引發的例外。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 28,
+    "text": "例外的處理者不僅處理 try 子句內立即發生的例外，還處理 try 子句內（即使是間接地）呼叫的函式內部發生的例外。例如："
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 30,
+    "text": "raise 唯一的引數就是要引發的例外。該引數必須是一個例外實例或例外 class（衍生自 BaseException 的 class，例如 Exception 與它的 subclass）。如果一個例外 class 被傳遞，它會不含引數地呼叫它的建構函式 (constructor) ，使它被自動建立實例 (implicitly instantiated)："
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 31,
+    "text": "如果你只想判斷是否引發了例外，但並不打算處理它，則可以使用簡單的 raise 陳述式來重新引發該例外："
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 32,
+    "text": "如果在 except 段落內部發生了一個未處理的例外，則它會讓這個將要被處理的例外附加在後，並將其包含在錯誤訊息中："
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 37,
+    "text": "程式可以透過建立新的例外 class 來命名自己的例外（深入了解 Python class，詳見Class（類別））。不論是直接還是間接地，例外通常應該從 Exception class 衍生出來。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 38,
+    "text": "例外 class 可被定義來做任何其他 class 能夠做的事，但通常會讓它維持簡單，只提供一些屬性，讓關於錯誤的資訊可被例外的處理者抽取出來。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 42,
+    "text": "如果 finally 子句存在，則 finally 子句會是 try 陳述式結束前執行的最後一項任務。不論 try 陳述式是否產生例外，都會執行 finally 子句。以下幾點將探討例外發生時，比較複雜的情況："
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 43,
+    "text": "若一個例外發生於 try 子句的執行過程，則該例外會被某個 except 子句處理。如果該例外沒有被 except 子句處理，它會在 finally 子句執行後被重新引發。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 44,
+    "text": "一個例外可能發生於 except 或 else 子句的執行過程。同樣地，該例外會在 finally 子句執行後被重新引發。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 45,
+    "text": "如果 finally 子句執行 break、continue 或 return 陳述式，則例外不會被重新引發。這可能會令人困惑，因此不建議這麼做。從 3.14 版本開始，編譯器會為此發出 SyntaxWarning（詳見 PEP 765）。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 46,
+    "text": "如果 try 陳述式遇到 break、continue 或 return 陳述式，則 finally 子句會在執行 break、continue 或 return 陳述式之前先執行。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 47,
+    "text": "如果 finally 子句中包含 return 陳述式，則回傳值會是來自 finally 子句的 return 陳述式的回傳值，而不是來自 try 子句的 return 陳述式的回傳值。這可能會令人困惑，因此不建議這麼做。從 3.14 版本開始，編譯器會為此發出 SyntaxWarning（詳見 PEP 765）。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 50,
+    "text": "如你所見，finally 子句在任何情況下都會被執行。兩個字串相除所引發的 TypeError 沒有被 except 子句處理，因此會在 finally 子句執行後被重新引發。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 51,
+    "text": "在真實應用程式中，finally 子句對於釋放外部資源（例如檔案或網路連線）很有用，無論該資源的使用是否成功。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 52,
+    "text": "某些物件定義了在物件不再被需要時的標準清理動作，無論使用該物件的作業是成功或失敗。請看以下範例，它嘗試開啟一個檔案，並印出檔案內容至螢幕。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 53,
+    "text": "這段程式碼的問題在於，執行完該程式碼後，它讓檔案在一段不確定的時間內處於開啟狀態。在簡單腳本中這不是問題，但對於較大的應用程式來說可能會是個問題。with 陳述式讓物件（例如檔案）在被使用時，能保證它們總是及時、正確地被清理。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 54,
+    "text": "陳述式執行完畢後，就算是在處理內容時遇到問題，檔案 f 總是會被關閉。和檔案一樣，提供預定義清理動作的物件會在說明文件中表明這一點。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 55,
+    "text": "在某些情況下，必須回報已經發生的多個例外。在並行框架 (concurrency framework) 中經常會出現這種情況，當平行的 (parallel) 某些任務可能已經失效，但還有其他用例 (use case) 希望能繼續執行並收集多個例外，而不是只有引發第一個例外時。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 56,
+    "text": "內建的 ExceptionGroup 會包裝一個例外實例 (exception instance) 的 list（串列），使得它們可以一起被引發。由於它本身就是一個例外，因此它也可以像任何其他例外一樣被捕獲。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 57,
+    "text": "若使用 except* 代替 except，我們可以選擇性地只處理該群組中與特定類型匹配的例外。在以下範例中，展示了一個巢狀的例外群組 (exception group)，每個 except* 子句分別從該群組中提取一個特定類型的例外，同時讓所有其他的例外都傳遞到其他子句，最後再被重新引發。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 58,
+    "text": "請注意，被巢套在例外群組中的例外必須是實例，而不是類型。這是因為在實務上，這些例外通常是已經被程式引發並捕獲的例外，類似以下的模式："
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 59,
+    "text": "當一個例外是為了被引發而建立時，它通常會伴隨著一些資訊被初始化，這些資訊描述了當下發生的錯誤。在某些情況，在例外被捕獲之後添加資訊會很有用。為此，例外具有一個 add_note(note) method（方法），它可以接受一個字串並將其添加到例外的註解清單中。標準的回溯呈現會在例外之後列出所有的註解，並按照其被添加的順序來排列。"
+  },
+  {
+    "doc_id": "errors.html",
+    "title": "8. 錯誤和例外¶",
+    "paragraph_id": 60,
+    "text": "例如，在將例外收集到例外群組中時，我們可能希望為各個錯誤添加一些上下文的資訊。在以下範例中，群組中的每個例外都有一條註解，指示此錯誤是在何時發生。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 2,
+    "text": "Class 提供了一種結合資料與功能的手段。建立一個 class 將會新增一個物件的型別 (type)，並且允許建立該型別的新實例 (instance)。每一個 class 實例可以擁有一些維持該實例狀態的屬性 (attribute)。Class 實例也可以有一些（由其 class 所定義的）method（方法），用於修改該實例的狀態。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 3,
+    "text": "與其他程式語言相比，Python 的 class 機制為 class 增加了最少的新語法跟語意。他混合了 C++ 和 Modula-3 的 class 機制。Python 的 class 提供了所有物件導向程式設計 (Object Oriented Programming) 的標準特色：class 繼承機制允許多個 base class（基底類別），一個 derived class（衍生類別）可以覆寫 (override) 其 base class 的任何 method，且一個 method 可以用相同的名稱呼叫其 base class 的 method。物件可以包含任意數量及任意種類的資料。如同模組一樣，class 也具有 Python 的動態特性：他們在執行期 (runtime) 被建立，且可以在建立之後被修改。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 4,
+    "text": "在 C++ 的術語中，class 成員（包含資料成員）通常都是公開的（除了以下內容：私有變數），而所有的成員函式都是虛擬的。如同在 Modula-3 中一樣，Python 並沒有提供簡寫可以從物件的 method 裡參照其成員：method 函式與一個外顯的 (explicit)、第一個代表物件的引數被宣告，而此引數是在呼叫時隱性地 (implicitly) 被提供。如同在 Smalltak 中，class 都是物件，這為 import 及重新命名提供了語意。不像 C++ 和 Modula-3，Pyhon 內建的型別可以被使用者以 base class 用於其他擴充 (extension)。另外，如同在 C++ 中，大多數有著特別語法的內建運算子（算術運算子、下標等）都可以為了 class 實例而被重新定義。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 5,
+    "text": "（由於缺乏普遍能接受的術語來討論 class，我偶爾會使用 Smalltalk 和 C++ 的術語。我會使用 Modula-3 的術語，因為它比 C++ 更接近 Python 的物件導向語意，但我預期比較少的讀者會聽過它。）"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 6,
+    "text": "物件有個體性 (individuality)，且多個名稱（在多個作用域 (scope) ）可以被連結到相同的物件。這在其他語言中被稱為別名 (aliasing)。初次接觸 Python 時通常不會注意這件事，而在處理不可變的基本型別（數值、字串、tuple）時，它也可以安全地被忽略。然而，別名在含有可變物件（如 list（串列）、dictionary（字典）、和大多數其他的型別）的 Python 程式碼語意中，可能會有意外的效果。這通常有利於程式，因為別名在某些方面表現得像指標 (pointer)。舉例來說，在實作時傳遞一個物件是便宜的，因為只有指標被傳遞；假如函式修改了一個作為引數傳遞的物件，呼叫函式者 (caller) 能夠見到這些改變——這消除了在 Pascal 中兩個相異引數傳遞機制的需求。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 7,
+    "text": "在介紹 class 之前，我必須先告訴你一些關於 Python 作用域的規則。Class definition（類別定義）以命名空間展現了一些俐落的技巧，而你需要了解作用域和命名空間的運作才能完整理解正在發生的事情。順帶一提，關於這個主題的知識對任何進階的 Python 程式設計師都是很有用的。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 9,
+    "text": "命名空間是從名稱到物件的對映。大部分的命名空間現在都是以 Python 的 dictionary 被實作，但通常不會以任何方式被察覺（除了性能），且它可能會在未來改變。命名空間的例子有：內建名稱的集合（包含如 abs() 的函式，和內建的例外名稱）；模組中的全域 (global) 名稱；和在函式呼叫中的區域 (local) 名稱。某種意義上，物件中的屬性集合也會形成一個命名空間。關於命名空間的重要一點是，不同命名空間中的名稱之間絕對沒有關係；舉例來說，兩個不一樣的模組都可以定義一個 maximize 函式而不會混淆——模組的使用者必須為它加上前綴 (prefix) 模組名稱。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 10,
+    "text": "順帶一提，我使用屬性 (attribute) 這個字，統稱句號 (dot) 後面的任何名稱——例如，運算式中的 z.real，real 是物件 z 的一個屬性。嚴格來說，模組中名稱的參照都是屬性參照：在運算式 modname.funcname 中，modname 是模組物件而 funcname 是它的屬性。在這種情況下，模組的屬性和模組中定義的全域名稱碰巧有一個直接的對映：他們共享了相同的命名空間！[1]"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 11,
+    "text": "屬性可以是唯讀的或可寫的。在後者的情況下，對屬性的賦值是可能的。模組屬性是可寫的：你可以寫 modname.the_answer = 42。可寫屬性也可以用 del 陳述式刪除。例如，del modname.the_answer 將從名為 modname 的物件中刪除屬性 the_answer。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 12,
+    "text": "命名空間在不同的時刻被建立，並且有不同的壽命。當 Python 直譯器啟動時，含有內建名稱的命名空間會被建立，並且永遠不會被刪除。當模組定義被讀入時，模組的全域命名空間會被建立；一般情況下，模組的命名空間也會持續到直譯器結束。被直譯器的頂層呼叫 (top-level invocation) 執行的陳述式，不論是從腳本檔案讀取的或是互動模式中的，會被視為一個稱為 __main__ 的模組的一部分，因此它們具有自己的全域命名空間。（內建名稱實際上也存在一個模組中，它被稱為 builtins。）"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 13,
+    "text": "函式的區域命名空間是在呼叫函式時建立的，而當函式回傳，或引發了未在函式中處理的例外時，此命名空間將會被刪除。（實際上，忘記是描述實際發生的事情的更好方法。） 當然，每個遞迴呼叫 (recursive invocation) 都有自己的區域命名空間。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 14,
+    "text": "作用域是 Python 程式中的一個文本區域 (textual region)，在此區域，命名空間是可直接存取的。這裡的「可直接存取的」意思是，對一個名稱的非限定參照 (unqualified reference) 可以在命名空間內嘗試尋找該名稱。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 15,
+    "text": "儘管作用域是靜態地被決定，但它們是動態地被使用的。在執行期間內的任何時間點，都會有 3 或 4 個巢狀的作用域，其命名空間是可以被直接存取的："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 17,
+    "text": "任何外圍函式 (enclosing function) 的作用域，會從最近的外圍作用域開始搜尋，它包含了非區域 (non-local) 和非全域 (non-global) 的名稱"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 20,
+    "text": "如果一個名稱被宣告為全域，則所有的參照和賦值將直接轉到包含模組全域名稱的倒數第二個作用域。要重新連結最內層作用域以外找到的變數，可以使用 nonlocal 陳述式；如果那些變數沒有被宣告為 nonlocal，則它們會是唯讀的（嘗試寫入這樣的變數只會在最內層的作用域內建立一個新的區域變數，同名的外部變數則維持不變）。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 21,
+    "text": "通常，區域作用域會參照（文本的）目前函式的區域名稱。在函式外部，區域作用域與全域作用域參照相同的命名空間：模組的命名空間。然而，Class definition 會在區域作用域中放置另一個命名空間。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 22,
+    "text": "務必要了解，作用域是按文本被決定的：在模組中定義的函式，其全域作用域便是該模組的命名空間，無論函式是從何處或以什麼別名被呼叫。另一方面，對名稱的實際搜尋是在執行時期 (run time) 動態完成的——但是，語言定義的發展，正朝向在「編譯」時期 (compile time) 的靜態名稱解析 (static name resolution)，所以不要太依賴動態名稱解析 (dynamic name resolution)！ （事實上，局部變數已經是靜態地被決定。）"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 23,
+    "text": "一個 Python 的特殊癖好是——假如沒有 global 或 nonlocal 陳述式的效果——名稱的賦值 (assignment) 都會指向最內層作用域。賦值不會複製資料——它們只會把名稱連結至物件。刪除也是一樣：陳述式 del x 會從區域作用域參照的命名空間移除 x 的連結。事實上，引入新名稱的所有運算都使用區域作用域：特別是 import 陳述式和函式定義，會連結區域作用域內的模組或函式名稱。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 24,
+    "text": "global 陳述式可以用來表示特定變數存活在全域作用域，應該被重新綁定到那裡；nonlocal 陳述式表示特定變數存活在外圍作用域內，應該被重新綁定到那裡。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 25,
+    "text": "這是一個範例，演示如何參照不同的作用域和命名空間，以及 global 和 nonlocal 如何影響變數的綁定："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 27,
+    "text": "請注意，區域賦值（預設情況）不會改變 scope_test 對 spam 的連結。nonlocal 賦值改變了 scope_test 對 spam 的連結，而 global 賦值改變了模組層次的連結。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 31,
+    "text": "Class definition，如同函式定義（def 陳述式），必須在它們有任何效果前先執行。（你可以想像把 class definition 放在一個 if 陳述式的分支，或在函式裡。）"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 32,
+    "text": "在實作時，class definition 內的陳述式通常會是函式定義，但其他陳述式也是允許的，有時很有用——我們稍後會回到這裡。Class 中的函式定義通常會有一個獨特的引數列表形式，取決於 method 的呼叫慣例——再一次地，這將會在稍後解釋。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 33,
+    "text": "當進入 class definition，一個新的命名空間將會被建立，並且作為區域作用域——因此，所有區域變數的賦值將進入這個新的命名空間。特別是，函式定義會在這裡連結新函式的名稱。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 34,
+    "text": "正常地（從結尾處）離開 class definition 時，一個 class 物件會被建立。基本上這是一個包裝器 (wrapper)，裝著 class definition 建立的命名空間內容；我們將在下一節中更加了解 class 物件。原始的區域作用域（在進入 class definition 之前已生效的作用域）會恢復，在此 class 物件會被連結到 class definition 標頭中給出的 class 名稱（在範例中為 ClassName）。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 35,
+    "text": "Class 物件支援兩種運算：屬性參照 (attribute reference) 和實例化 (instantiation)。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 36,
+    "text": "屬性參照使用 Python 中所有屬性參照的標準語法：obj.name。有效的屬性名稱是 class 物件被建立時，class 的命名空間中所有的名稱。所以，如果 class definition 看起來像這樣："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 37,
+    "text": "那麼 MyClass.i 和 MyClass.f 都是有效的屬性參照，會分別回傳一個整數和一個函式物件。Class 屬性也可以被指派 (assign)，所以你可以透過賦值改變 MyClass.i 的值。__doc__ 也是一個有效的屬性，會回傳屬於該 class 的說明字串 (docstring)：\"A simple example class\"。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 38,
+    "text": "Class 實例化使用了函式記法 (function notation)。就好像 class 物件是一個沒有參數的函式，它回傳一個新的 class 實例。例如（假設是上述的 class）："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 40,
+    "text": "實例化運算（「呼叫」一個 class 物件）會建立一個空的物件。許多 class 喜歡在建立物件時有著自訂的特定實例初始狀態。因此，class 可以定義一個名為 __init__() 的特別 method，像這樣："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 41,
+    "text": "當 class 定義了 __init__() method，class 實例化會為新建的 class 實例自動叫用 __init__()。所以在這個範例中，一個新的、初始化的實例可以如此獲得："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 42,
+    "text": "當然，__init__() method 可能為了更多的彈性而有引數。在這種情況下，要給 class 實例化運算子的引數會被傳遞給 __init__()。例如："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 43,
+    "text": "現在，我們可以如何處理實例物件？實例物件能理解的唯一運算就是屬性參照。有兩種有效的屬性名稱：資料屬性 (data attribute) 和 method。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 44,
+    "text": "資料屬性對應 Smalltalk 中的「實例變數」，以及 C++ 中的「資料成員」。資料屬性不需要被宣告；和區域變數一樣，它們在第一次被賦值時就會立即存在。例如，如果 x 是 MyClass 在上述例子中建立的實例，下面的程式碼將印出值 16，而不留下蹤跡："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 46,
+    "text": "實例物件的有效 method 名稱取決於其 class。根據定義，一個 class 中所有的函式物件屬性，就定義了實例的對應 method。所以在我們的例子中，x.f 是一個有效的 method 參照，因為 MyClass.f 是一個函式，但 x.i 不是，因為 MyClass.i 不是。但 x.f 與 MyClass.f 是不一樣的——它是一個 method 物件，而不是函式物件。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 48,
+    "text": "如果像上面一樣 x = MyClass()，這將回傳字串 'hello world'。然而，並沒有必要立即呼叫一個 method：x.f 是一個 method 物件，並且可以被儲藏起來，之後再被呼叫。舉例來說："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 50,
+    "text": "當一個 method 被呼叫時究竟會發生什麼事？你可能已經注意到 x.f() 被呼叫時沒有任何的引數，儘管 f() 的函式定義有指定一個引數。這個引數發生了什麼事？當一個需要引數的函式被呼叫而沒有給任何引數時，Python 肯定會引發例外——即使該引數實際上沒有被使用..."
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 51,
+    "text": "事實上，你可能已經猜到了答案：method 的特殊之處在於，實例物件會作為函式中的第一個引數被傳遞。在我們的例子中，x.f() 這個呼叫等同於 MyClass.f(x)。一般來說，呼叫一個有 n 個引數的 method，等同於呼叫一個對應函式，其引數列表 (argument list) 被建立時，會在第一個引數前插入該 method 的實例物件。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 52,
+    "text": "一般來說，方法的工作原理如下。當一個實例的非資料屬性被參照時，將會搜尋該實例的 class。如果該名稱是一個有效的 class 屬性，而且是一個函式物件，則對實例物件和函式物件的參照都會被打包到方法物件中。當使用引數串列呼叫方法物件時，會根據實例物件和引數串列來建構一個新的引數串列，並使用該新引數串列來呼叫函式物件。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 53,
+    "text": "一般來說，實例變數用於每一個實例的獨特資料，而 class 變數用於該 class 的所有實例共享的屬性和 method："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 54,
+    "text": "如同在關於名稱與物件的一段話的討論，共享的資料若涉及 mutable 物件，如 list 和 dictionary，可能會產生意外的影響。舉例來說，下列程式碼的 tricks list 不應該作為一個 class 變數使用，因為這個 list 將會被所有的 Dog 實例所共享："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 57,
+    "text": "資料屬性可能被 method 或是被物件的一般使用者（「用戶端」）所參照。也就是說，class 不可用於實作純粹抽象的資料型別。事實上，在 Python 中沒有任何可能的方法，可強制隱藏資料——這都是基於慣例。（另一方面，以 C 編寫的 Python 實作可以完全隱藏實作細節並且在必要時控制物件的存取；這可以被以 C 編寫的 Python 擴充所使用。）"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 58,
+    "text": "用戶端應該小心使用資料屬性——用戶端可能會因為覆寫他們的資料屬性，而破壞了被 method 維護的不變性。注意，用戶端可以增加他們自己的資料屬性到實例物件，但不影響 method 的有效性，只要避免名稱衝突即可——再一次提醒，命名慣例可以在這裡節省很多麻煩。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 59,
+    "text": "在 method 中參照資料屬性（或其他 method！）是沒有簡寫的。我發現這實際上增加了 method 的可閱讀性：在瀏覽 method 時，絕不會混淆區域變數和實例變數。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 60,
+    "text": "通常，方法的第一個引數稱為 self。這僅僅只是一個慣例：self 這個名字對 Python 來說完全沒有特別的意義。但請注意，如果不遵循慣例，你的程式碼可能對其他 Python 程式設計師來說可讀性較低，此外，也可以想像一個可能因信任此慣例而編寫的 class 瀏覽器 (browser) 程式。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 61,
+    "text": "任何一個作為 class 屬性的函式物件都為該 class 的實例定義了一個相應的 method。函式定義不一定要包含在 class definition 的文本中：將函式物件指定給 class 中的區域變數也是可以的。例如："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 62,
+    "text": "現在 f、g 和 h 都是 class C 的屬性，並指向函式物件，所以他們都是class C 實例的 method —— h 與 g 是完全一樣的。請注意，這種做法通常只會使該程式的讀者感到困惑。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 64,
+    "text": "Method 可以用與一般函式相同的方式參照全域名稱。與 method 相關的全域作用域，就是包含其定義的模組。（class 永遠不會被用作全域作用域。）雖然人們很少有在 method 中使用全域資料的充分理由，但全域作用域仍有許多合法的使用：比方說，被 import 至全域作用域的函式和模組，可以被 method 以及在該作用域中定義的函式和 class 所使用。通常，包含 method 的 class，它本身就是被定義在這個全域作用域，在下一節，我們將看到 method 想要參照自己的 class 的一些好原因。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 65,
+    "text": "每個值都是一個物件，因此都具有一個 class，也可以稱為它的 type（型別）。它以 object.__class__ 被儲存。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 66,
+    "text": "當然，如果沒有支援繼承，「class」這個語言特色就不值得被稱為 class。一個 derived class（衍生類別）定義的語法看起來如下："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 67,
+    "text": "名稱 BaseClassName 必須被定義於作用域可及的命名空間，且該作用域要包含 derived class 定義。要代替 base class（基底類別）的名稱，用其他任意的運算式也是被允許的。這會很有用，例如，當一個 base class 是在另一個模組中被定義時："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 68,
+    "text": "執行 derived class 定義的過程，與執行 base class 相同。當 class 物件被建構時，base class 會被記住。這是用於解析屬性參照：如果一個要求的屬性無法在該 class 中找到，則會繼續在 base class 中搜尋。假如該 base class 本身也是衍生自其他 class，則這個規則會遞迴地被應用。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 69,
+    "text": "關於 derived class 的實例化並沒有特別之處：DerivedClassName() 會建立該 class 的一個新實例。Method 的參照被解析如下：對應的 class 屬性會被搜尋，如果需要，沿著 base class 的繼承鍊往下走，如果這產生了一個函式物件，則該 method 的參照是有效的。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 70,
+    "text": "Derived class 可以覆寫其 base class 的 method。因為 method 在呼叫同一個物件的其他 method 時沒有特別的特權，所以當 base class 的一個 method 在呼叫相同 base class 中定義的另一個 method 時，最終可能會呼叫到一個覆寫它的 derived class 中的 method。（給 C++ 程式設計師：Python 中所有 method 實際上都是 virtual。）"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 71,
+    "text": "一個在 derived class 覆寫的 method 可能事實上是想要擴充而非單純取代 base class 中相同名稱的 method。要直接呼叫 base class 的 method 有一個簡單的方法：只要呼叫 BaseClassName.methodname(self, arguments)。這有時對用戶端也很有用。（請注意，只有在 base class 在全域作用域可以用 BaseClassName 被存取時，這方法才有效。）"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 73,
+    "text": "使用 isinstance() 判斷一個實例的型別：isinstance(obj, int) 只有在 obj.__class__ 是 int 或衍伸自 int 時，結果才會是 True。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 74,
+    "text": "使用 issubclass() 判斷 class 繼承：issubclass(bool, int) 會是 True，因為 bool 是 int 的 subclass（子類別）。但是，issubclass(float, int) 是 False，因為 float 並不是 int 的 subclass。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 75,
+    "text": "Python 也支援多重繼承的形式。一個有多個 base class 的 class definition 看起來像這樣子："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 76,
+    "text": "在大多數情況下，最簡單的例子裡，你可以這樣思考，對於繼承自 parent class（父類別）的屬性，其搜尋規則為：深度優先、從左到右、在階層裡重疊的相同 class 中不重複搜尋。因此，假如有一個屬性在 DerivedClassName 沒有被找到，則在 Base1 搜尋它，接著（遞迴地）在 Base1 的 base class 中搜尋，假如在那裡又沒有找到的話，會在 Base2 搜尋，依此類推。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 77,
+    "text": "事實上，它稍微複雜一些；method 的解析順序是動態地變化，以支援對 super() 的合作呼叫。這個方式在其他的多重繼承語言中，稱為呼叫下一個方法 (call-next-method)，且比在單一繼承語言中的 super call（超級呼叫）來得更強大。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 78,
+    "text": "動態排序是必要的，因為多重繼承的所有情況都表現一或多的菱形關係（其中至少一個 parent class 可以從最底層 class 透過多個路徑存取）。例如，所有的 class 都繼承自 object，因此任何多重繼承的情況都提供了多個到達 object 的路徑。為了避免 base class 被多次存取，動態演算法以這些方式將搜尋順序線性化 (linearize)：保留每個 class 中規定的從左到右的順序、對每個 parent 只會呼叫一次、使用單調的 (monotonic) 方式（意思是，一個 class 可以被 subclassed（子類別化），而不會影響其 parent 的搜尋優先順序）。總之，這些特性使設計出可靠又可擴充、具有多重繼承的 class 成為可能。更多資訊，請見 Python 2.3 方法解析順序。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 79,
+    "text": "「私有」(private) 實例變數，指的是不在物件內部便無法存取的變數，這在 Python 中是不存在的。但是，大多數 Python 的程式碼都遵守一個慣例：前綴為一個底線的名稱（如：_spam）應被視為 API （應用程式介面）的非公有 (non-public) 部分（無論它是函式、方法或是資料成員）。這被視為一個實作細節，如有調整，亦不另行通知。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 80,
+    "text": "既然 class 私有的成員已有一個有效的用例（即避免名稱與 subclass 定義的名稱衝突），這種機制也存在另一個有限的支援，稱為 name mangling（名稱修飾）。任何格式為 __spam（至少兩個前導下底線，最多一個尾隨下底線）的物件名稱 (identifier) 會被文本地被替換為 _classname__spam，在此 classname 就是去掉前導下底線的目前 class 名稱。只要這個修飾是在 class 的定義之中發生，它就會在不考慮該物件名稱的語法位置的情況下完成。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 83,
+    "text": "名稱修飾對於讓 subclass 覆寫 method 而不用破壞 class 內部的 method 呼叫，是有幫助的。舉例來說："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 84,
+    "text": "在上例中，就算在 MappingSubclass 當中加入 __update 識別符，也能順利運作，因為在 Mapping class 中，它會被替換為 _Mapping__update，而在 MappingSubclass class 中，它會被替換為 _MappingSubclass__update。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 85,
+    "text": "請注意，修飾規則是被設計來避免意外；它仍可能存取或修改一個被視為私有的變數。這在特殊情況下甚至可能很有用，例如在除錯器 (debugger)。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 86,
+    "text": "另外也注意，傳遞給 exec() 或 eval() 的程式碼不會把叫用 class 的名稱視為目前的 class；這和 global 陳述式的效果類似，該效果同樣僅限於整體被位元組編譯後 (byte-compiled) 的程式碼。同樣的限制適用於 getattr()，setattr() 和 delattr()，以及直接參照 __dict__ 時。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 87,
+    "text": "如果有一種資料型別，類似於 Pascal 的「record」或 C 的「struct」，可以將一些有名稱的資料項目捆綁在一起，有時候這會很有用。符合語言習慣的做法是使用 dataclasses："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 88,
+    "text": "用來處理特殊抽象資料型別的一段 Python 程式碼，經常能以傳遞一個 class 來替代，此 class 模擬該資料型別的多種 method。例如，如果你有一個函式，它會從一個檔案物件來格式化某些資料，你也可以定義一個有 read() 和 readline() method 的 class 作為替代方式，從字串緩衝區取得資料，並將其作為引數來傳遞。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 89,
+    "text": "實例的 method 物件也具有屬性：m.__self__ 就是帶有 method m() 的實例物件，而 m.__func__ 則是該 method 所對應的函式物件。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 90,
+    "text": "到目前為止，你可能已經注意到大多數的容器 (container) 物件都可以使用 for 陳述式來進行迴圈："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 91,
+    "text": "這種存取風格清晰、簡潔且方便。疊代器的使用在 Python 中處處可見且用法一致。在幕後，for 陳述式會在容器物件上呼叫 iter()。該函式回傳一個疊代器物件，此物件定義了 __next__() method，而此 method 會逐一存取容器中的元素。當元素用盡時，__next__() 將引發 StopIteration 例外，來通知 for 終止迴圈。你可以使用內建函式 next() 來呼叫 __next__() method；這個例子展示了它的運作方式："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 92,
+    "text": "看過疊代器協定的幕後機制後，在你的 class 加入疊代器的行為就很容易了。定義一個 __iter__() method 來回傳一個帶有 __next__() method 的物件。如果 class 已定義了 __next__()，則 __iter__() 可以只回傳 self："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 93,
+    "text": "產生器是一個用於建立疊代器的簡單而強大的工具。它們的寫法和常規的函式一樣，但當它們要回傳資料時，會使用 yield 陳述式。每次在產生器上呼叫 next() 時，它會從上次離開的位置恢復執行（它會記得所有資料值以及上一個被執行的陳述式）。以下範例顯示，建立產生器可以相當地容易："
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 94,
+    "text": "任何可以用產生器來完成的事，也能用以 class 為基礎的疊代器來完成，如同前一節的描述。而讓產生器的程式碼更為精簡的原因是，__iter__() 和 __next__() method 會自動被建立。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 95,
+    "text": "另一個關鍵的特性在於，區域變數和執行狀態會在每次呼叫之間自動被儲存。這使得該函式比使用 self.index 和 self.data 這種實例變數的方式更容易編寫且更為清晰。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 96,
+    "text": "除了會自動建立 method 和儲存程式狀態，當產生器終止時，它們還會自動引發 StopIteration。這些特性結合在一起，使建立疊代器能與編寫常規函式一樣容易。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 97,
+    "text": "某些簡單的產生器可以寫成如運算式一般的簡潔程式碼，所用的語法類似 list comprehension（串列綜合運算），但外層為括號而非方括號。這種運算式被設計用於產生器將立即被外圍函式 (enclosing function) 所使用的情況。產生器運算式與完整的產生器定義相比，程式碼較精簡但功能較少，也比等效的 list comprehension 更為節省記憶體。"
+  },
+  {
+    "doc_id": "classes.html",
+    "title": "9. Class（類別）¶",
+    "paragraph_id": 100,
+    "text": "有一個例外。模組物件有一個秘密的唯讀屬性，稱為 __dict__，它回傳用於實作模組命名空間的 dictionary；__dict__ 這個名稱是一個屬性但不是全域名稱。顯然，使用此屬性將違反命名空間實作的抽象化，而應該僅限用於事後除錯器 (post-mortem debugger) 之類的東西。"
+  },
+  {
+    "doc_id": "stdlib.html",
+    "title": "10. Brief tour of the standard library¶",
+    "paragraph_id": 3,
+    "text": "務必使用 import os 而非 from os import *。這將避免因系統不同而有實作差異的 os.open() 覆蓋內建函式 open()。"
+  },
+  {
+    "doc_id": "stdlib.html",
+    "title": "10. Brief tour of the standard library¶",
+    "paragraph_id": 7,
+    "text": "通用工具腳本常需要處理命令列引數。這些引數會以 list（串列）形式存放在 sys 模組的 argv 屬性中。例如以下 demo.py 檔案："
+  },
+  {
+    "doc_id": "stdlib.html",
+    "title": "10. Brief tour of the standard library¶",
+    "paragraph_id": 9,
+    "text": "argparse 模組提供了一種更複雜的機制來處理命令列引數。以下腳本可擷取一個或多個檔案名稱，並可選擇要顯示的行數："
+  },
+  {
+    "doc_id": "stdlib.html",
+    "title": "10. Brief tour of the standard library¶",
+    "paragraph_id": 10,
+    "text": "當 python top.py --lines=5 alpha.txt beta.txt 在命令列執行時，該腳本會將 args.lines 設為 5，並將 args.filenames 設為 ['alpha.txt', 'beta.txt']。"
+  },
+  {
+    "doc_id": "stdlib.html",
+    "title": "10. Brief tour of the standard library¶",
+    "paragraph_id": 11,
+    "text": "sys 模組也有 stdin，stdout，和 stderr 等屬性。即使當 stdout 被重新導向時，後者 stderr 可輸出警告和錯誤訊息："
+  },
+  {
+    "doc_id": "stdlib.html",
+    "title": "10. Brief tour of the standard library¶",
+    "paragraph_id": 13,
+    "text": "re 模組提供正規表示式 (regular expression) 做進階的字串處理。當要處理複雜的比對以及操作時，正規表示式是簡潔且經過最佳化的解決方案："
+  },
+  {
+    "doc_id": "stdlib.html",
+    "title": "10. Brief tour of the standard library¶",
+    "paragraph_id": 19,
+    "text": "Python 中有許多存取網路以及處理網路協定。最簡單的兩個例子包括 urllib.request 模組可以從網址抓取資料以及 smtplib 可以用來寄郵件："
+  },
+  {
+    "doc_id": "stdlib.html",
+    "title": "10. Brief tour of the standard library¶",
+    "paragraph_id": 21,
+    "text": "datetime 模組提供許多 class 可以操作日期以及時間，從簡單從複雜都有。模組支援日期與時間的運算，而實作的重點是有效率的成員擷取以達到輸出格式化以及操作。模組也提供支援時區換算的類別。"
+  },
+  {
+    "doc_id": "stdlib.html",
+    "title": "10. Brief tour of the standard library¶",
+    "paragraph_id": 22,
+    "text": "常見的解壓縮以及壓縮格式都有直接支援的模組。包括：zlib、gzip、bz2、lzma、zipfile 以及 tarfile。"
+  },
+  {
+    "doc_id": "stdlib.html",
+    "title": "10. Brief tour of the standard library¶",
+    "paragraph_id": 23,
+    "text": "有一些 Python 使用者很想了解同個問題的不同實作方法的效能差異。Python 提供了評估效能差異的工具。"
+  },
+  {
+    "doc_id": "stdlib.html",
+    "title": "10. Brief tour of the standard library¶",
+    "paragraph_id": 24,
+    "text": "舉例來說，有人可能會試著用 tuple 的打包機制來交換引數代替傳統的方式。timeit 模組可以迅速地展示效能的進步："
+  },
+  {
+    "doc_id": "stdlib.html",
+    "title": "10. Brief tour of the standard library¶",
+    "paragraph_id": 25,
+    "text": "相對於 timeit 模組提供這麼細的粒度，profile 模組以及 pstats 模組則提供了一些在大型的程式碼識別時間使用上關鍵的區塊 (time critical section) 的工具。"
+  },
+  {
+    "doc_id": "stdlib.html",
+    "title": "10. Brief tour of the standard library¶",
+    "paragraph_id": 27,
+    "text": "doctest 模組提供了一個工具，掃描模組並根據程式中內嵌的文件字串執行測試。撰寫測試如同簡單地將它的呼叫及輸出結果剪下並貼上到文件字串中。透過提供範例給使用者，它強化了說明文件，並允許 doctest 模組確認程式碼的結果與說明文件一致："
+  },
+  {
+    "doc_id": "stdlib.html",
+    "title": "10. Brief tour of the standard library¶",
+    "paragraph_id": 28,
+    "text": "unittest 模組不像 doctest 模組這般容易，但是它讓你可以在另外一個檔案裡撰寫更完整的測試集："
+  },
+  {
+    "doc_id": "stdlib.html",
+    "title": "10. Brief tour of the standard library¶",
+    "paragraph_id": 29,
+    "text": "\"Batteries included\" 是 Python 的設計哲學。這個理念可以透過使用它的大型套件，感受複雜與強大的功能，來得到印證。例如："
+  },
+  {
+    "doc_id": "stdlib.html",
+    "title": "10. Brief tour of the standard library¶",
+    "paragraph_id": 30,
+    "text": "使用 xmlrpc.client 和 xmlrpc.server 模組使實作遠端程序呼叫變得更為容易。即使模組名稱裡有 XML，使用者並不需要直接操作 XML 檔案或事先具備相關知識。"
+  },
+  {
+    "doc_id": "stdlib.html",
+    "title": "10. Brief tour of the standard library¶",
+    "paragraph_id": 31,
+    "text": "函式庫 email 套件用來管理 MIME 和其他 RFC 5322 相關電子郵件訊息的文件。相異於 smtplib 和 poplib 這些實際用來發送與接收訊息的模組，email 套件擁有更完整的工具集，可用於建立與解碼複雜訊息結構（包含附件檔案）以及實作編碼與標頭協定。"
+  },
+  {
+    "doc_id": "stdlib.html",
+    "title": "10. Brief tour of the standard library¶",
+    "paragraph_id": 32,
+    "text": "json 套件對 JSON 資料交換格式的剖析，提供強大的支援。csv 模組則提供直接讀寫 CSV（以逗號分隔值的檔案格式，通常資料庫和電子表格都有支援）。xml.etree.ElementTree、xml.dom 與 xml.sax 套件則支援 XML 的處理。綜觀所有，這些模組和套件都簡化了 Python 應用程式與其他工具之間的資料交換。"
+  },
+  {
+    "doc_id": "stdlib.html",
+    "title": "10. Brief tour of the standard library¶",
+    "paragraph_id": 33,
+    "text": "sqlite3 模組是 SQLite 資料庫函式庫的一層包裝，提供一個具持久性的資料庫，可以使用稍微非標準的 SQL 語法來對它進行更新與存取。"
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 4,
+    "text": "pprint 模組能對內建和使用者自定的物件提供更複雜的列印控制，並且是以直譯器可讀的方式。當結果超過一行時，「漂亮的印表機」會加入換行和縮排，以更清楚地顯示資料結構："
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 6,
+    "text": "locale 模組能存取一個含有特定文化相關資料格式的資料庫。locale 模組的 format 函式有一個 grouping 屬性，可直接以群分隔符 (group separator) 將數字格式化："
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 7,
+    "text": "string 模組包含一個多功能的 Template class，提供的簡化語法適合使用者進行編輯時使用。它容許使用者客製化自己的應用程式，但不必對原應用程式做出變更。"
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 8,
+    "text": "格式化方式是使用佔位符號名稱 (placeholder name)，它是由 $ 加上合法的 Python 識別符（字母、數字和下底線）構成。使用大括號包覆佔位符號以允許在後面接上更多的字母和數字而無需插入空格。使用 $$ 將會跳脫為單一字元 $："
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 9,
+    "text": "如果在 dictionary 或關鍵字引數中未提供某個佔位符號的值，那麼 substitute() method 將引發 KeyError。對於郵件合併 (mail-merge) 類型的應用程式，使用者提供的資料有可能是不完整的，此時使用 safe_substitute() method 會更適當——如果資料有缺少，它會保持佔位符號不變："
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 10,
+    "text": "Template 的 subclass（子類別）可以指定自訂的分隔符號 (delimiter)。例如，一個相片瀏覽器的批次重新命名功能，可以選擇用百分號作為現在日期、照片序號或檔案格式的佔位符號："
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 11,
+    "text": "模板化的另一個應用，是將程式邏輯與多樣的輸出格式細節分離開來。這樣就可以為 XML 檔案、純文字報表和 HTML 網路報表替換自訂的模板。"
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 12,
+    "text": "struct 模組提供了 pack() 和 unpack() 函式，用於處理可變動長度的二進制記錄格式。以下範例說明，如何在不使用 zipfile 模組的情況下，使用迴圈瀏覽一個 ZIP 檔案中的標頭資訊 (header information)。壓縮程式碼 \"H\" 和 \"I\" 分別代表兩個和四個位元組的無符號數 (unsigned number)。\"<\" 表示它們是標準大小，並使用小端 (little-endian) 位元組順序："
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 13,
+    "text": "執行緒是一種用來對非順序相依 (sequentially dependent) 的多個任務進行解耦 (decoupling) 的技術。當其他任務在背景執行時，多執行緒可以用來提升應用程式在接收使用者輸入時的反應能力。一個相關的用例是，運行 I/O 的同時，在另一個執行緒中進行計算。"
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 15,
+    "text": "多執行緒應用程式的主要挑戰是，要協調多個彼此共享資料或資源的執行緒。為此，threading 模組提供了多個同步原語 (synchronization primitive)，包括鎖 (lock)、事件 (event)、條件變數 (condition variable) 和號誌 (semaphore)。"
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 16,
+    "text": "儘管這些工具很強大，但很小的設計錯誤也可能導致一些難以重現的問題。所以，任務協調的首選方法是，把所有對資源的存取集中到單一的執行緒中，然後使用 queue 模組向該執行緒饋送來自其他執行緒的請求。應用程式若使用 Queue 物件進行執行緒間的通信和協調，會更易於設計、更易讀、更可靠。"
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 17,
+    "text": "logging 模組提供功能齊全且富彈性的日誌記錄系統。在最簡單的情況下，日誌訊息會被發送到檔案或 sys.stderr："
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 19,
+    "text": "在預設情況，資訊和除錯訊息不會被顯示，其輸出會被發送到標準錯誤 (standard error)。其他輸出選項包括，將訊息轉發到電子郵件、資料報 (datagram)、網路插座 (socket) 或 HTTP 伺服器。新的過濾器可以根據訊息的優先順序，選擇不同的路由 (routing) 方式：DEBUG、INFO、WARNING、ERROR 及 CRITICAL。"
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 20,
+    "text": "日誌記錄系統可以直接從 Python 配置，也可以透過載入使用者可編輯的配置檔案以進行客製化的日誌記錄，而無須對應用程式做出變更。"
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 21,
+    "text": "Python 會自動進行記憶體管理（對大多數物件進行參照計數 (reference counting) 並使用 garbage collection 來消除循環參照）。當一個參照從記憶體被移除後不久，該記憶體就會被釋出。"
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 22,
+    "text": "此方式對大多數應用程式來說都沒問題，但偶爾也需要在物件仍然被其他物件所使用時持續追蹤它們。可惜的是，儘管只是追蹤它們，也會建立一個使它們永久化 (permanent) 的參照。weakref 模組提供的工具可以不必建立參照就能追蹤物件。當該物件不再被需要時，它會自動從一個弱引用表 (weakref table) 中被移除，並為弱引用物件觸發一個回呼 (callback)。典型的應用包括暫存 (cache) 那些成本較為昂貴的物件："
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 23,
+    "text": "許多對於資料結構的需求，可以透過內建的 list（串列）型別來滿足。但是，有時也會根據效能的各種取捨，需要一些替代的實作。"
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 24,
+    "text": "array 模組提供了一個 array 物件，它像是 list，但只能儲存同類的資料且能緊密地儲存。下面的範例展示一個數值陣列 (array)，以兩個位元組的無符號二進數 (unsigned binary numbers) 為儲存單位（類型碼為 \"H\"），而在 Python 整數物件的正規 list 中，每個項目通常使用 16 個位元組："
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 25,
+    "text": "collections 模組提供了一個 deque 物件，它像是 list，但從左側加入 (append) 和彈出 (pop) 的速度較快，而在中間查找的速度則較慢。這種物件適用於實作佇列 (queue) 和廣度優先搜尋法 (breadth first tree search)："
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 26,
+    "text": "除了替代的 list 實作以外，函式庫也提供了其他工具，例如 bisect 模組，具有能夠操作 sorted list（已排序串列）的函式："
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 27,
+    "text": "heapq 模組提供了一些函式，能基於正規 list 來實作堆積 (heap)。最小值的項目會永遠保持在位置零。對於一些需要多次存取最小元素，但不想要對整個 list 進行排序的應用程式來說，這會很有用："
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 28,
+    "text": "decimal 模組提供了一個 Decimal 資料類型，用於十進制浮點數運算。相較於內建的二進制浮點數 float 實作，該 class 特別適用於下列情境"
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 34,
+    "text": "例如，要計算 70 美分的手機充電加上 5% 稅金的總價，使用十進制浮點數和二進制浮點數，會算出不同的答案。如果把計算結果四捨五入到最接近的美分，兩者的差異會更顯著："
+  },
+  {
+    "doc_id": "stdlib2.html",
+    "title": "11. Python 標準函式庫概覽——第二部份¶",
+    "paragraph_id": 35,
+    "text": "Decimal 的運算結果會保留尾部的零，也會根據有兩個有效位數的被乘數自動推斷出有四個有效位數的乘積。Decimal 可以重現手工計算的結果，以避免產生二進制浮點數無法準確表示十進制數值時會導致的問題。"
+  },
+  {
+    "doc_id": "venv.html",
+    "title": "12. 虛擬環境與套件¶",
+    "paragraph_id": 2,
+    "text": "Python 應用程式通常會用到不在標準函式庫的套件和模組。應用程式有時候會需要某個特定版本的函式庫，因為這個應用程式可能需要某個特殊的臭蟲修正，或是這個應用程式是根據該函式庫特定版本的介面所撰寫。"
+  },
+  {
+    "doc_id": "venv.html",
+    "title": "12. 虛擬環境與套件¶",
+    "paragraph_id": 3,
+    "text": "這意味著不太可能安裝一套 Python 就可以滿足所有應用程式的要求。如果應用程式 A 需要一個特定的模組的 1.0 版，但另外一個應用程式 B 需要 2.0 版，那麼這整個需求不管安裝 1.0 或是 2.0 都會衝突，以致於應用程式無法使用。"
+  },
+  {
+    "doc_id": "venv.html",
+    "title": "12. 虛擬環境與套件¶",
+    "paragraph_id": 4,
+    "text": "解決方案是建立一個虛擬環境 (virtual environment)，這是一個獨立的資料夾，並且裡面裝好了特定版本的 Python，以及一系列相關的套件。"
+  },
+  {
+    "doc_id": "venv.html",
+    "title": "12. 虛擬環境與套件¶",
+    "paragraph_id": 5,
+    "text": "不同的應用程式可以使用不同的虛擬環境。以前述中需要被解決的例子中，應用程式 A 能夠擁有它自己的虛擬環境，並且是裝好 1.0 版，然而應用程式 B 則可以是用另外一個有 2.0 版的虛擬環境。要是應用程式 B 需要某個函式庫被升級到 3.0 版，這並不會影響到應用程式 A 的環境。"
+  },
+  {
+    "doc_id": "venv.html",
+    "title": "12. 虛擬環境與套件¶",
+    "paragraph_id": 6,
+    "text": "用來建立與管理虛擬環境的模組叫做 venv。venv 將安裝執行命令的 Python 版本（如 --version 選項所報告的）。例如使用 python3.12 執行命令將安裝 3.12 版本。"
+  },
+  {
+    "doc_id": "venv.html",
+    "title": "12. 虛擬環境與套件¶",
+    "paragraph_id": 7,
+    "text": "在建立虛擬環境的時候，在你決定要放該虛擬環境的資料夾之後，以腳本 (script) 執行 venv 模組並且給定資料夾路徑："
+  },
+  {
+    "doc_id": "venv.html",
+    "title": "12. 虛擬環境與套件¶",
+    "paragraph_id": 8,
+    "text": "如果 tutorial-env 不存在的話，這會建立 tutorial-env 資料夾，並且也會在裡面建立一個有 Python 直譯器的複本以及不同的支援檔案的資料夾。"
+  },
+  {
+    "doc_id": "venv.html",
+    "title": "12. 虛擬環境與套件¶",
+    "paragraph_id": 9,
+    "text": "虛擬環境的常用資料夾位置是 .venv。這個名稱通常會使該資料夾在你的 shell 中保持隱藏，因此這樣命名既可以解釋資料夾存在的原因，也不會造成任何困擾。它還能防止與某些工具所支援的 .env 環境變數定義檔案發生衝突。"
+  },
+  {
+    "doc_id": "venv.html",
+    "title": "12. 虛擬環境與套件¶",
+    "paragraph_id": 13,
+    "text": "（這段程式碼適用於 bash shell。如果你是用 csh 或者 fish shell，應當使用替代的 activate.csh 與 activate.fish 腳本。）"
+  },
+  {
+    "doc_id": "venv.html",
+    "title": "12. 虛擬環境與套件¶",
+    "paragraph_id": 14,
+    "text": "啟動虛擬環境會改變你的 shell 提示字元來顯示你正在使用的虛擬環境，並且修改環境以讓你在執行 python 的時候可以得到特定的 Python 版本，例如："
+  },
+  {
+    "doc_id": "venv.html",
+    "title": "12. 虛擬環境與套件¶",
+    "paragraph_id": 17,
+    "text": "你可以使用一個叫做 pip 的程式來安裝、升級和移除套件。pip 預設會從 Python Package Index 安裝套件。你可以透過你的網頁瀏覽器瀏覽 Python Package Index。"
+  },
+  {
+    "doc_id": "venv.html",
+    "title": "12. 虛擬環境與套件¶",
+    "paragraph_id": 18,
+    "text": "pip 有好幾個子命令：\"install\"、\"uninstall\"、\"freeze\" 等等。（可以參考安裝 Python 模組指南，來取得 pip 的完整說明文件。）"
+  },
+  {
+    "doc_id": "venv.html",
+    "title": "12. 虛擬環境與套件¶",
+    "paragraph_id": 21,
+    "text": "要是你重新執行此命令，pip 會知道該版本已經安裝過，然後什麼也不做。你可以提供不同的版本號碼來取得該版本，或是可以執行 python -m pip install --upgrade 來把套件升級到最新的版本："
+  },
+  {
+    "doc_id": "venv.html",
+    "title": "12. 虛擬環境與套件¶",
+    "paragraph_id": 25,
+    "text": "python -m pip freeze 可以複製一整個已經安裝的套件清單，但是輸出使用 python -m pip install 可以讀懂的格式。一個常見的慣例是放這整個清單到一個叫做 requirements.txt 的檔案："
+  },
+  {
+    "doc_id": "venv.html",
+    "title": "12. 虛擬環境與套件¶",
+    "paragraph_id": 26,
+    "text": "requirements.txt 可以提交到版本控制，並且作為釋出應用程式的一部分。使用者可以透過 install -r 安裝對應的的套件："
+  },
+  {
+    "doc_id": "venv.html",
+    "title": "12. 虛擬環境與套件¶",
+    "paragraph_id": 27,
+    "text": "pip 還有更多功能。可以參考安裝 Python 模組指南，來取得完整的 pip 說明文件。當你撰寫了一個套件並且想要讓它在 Python Package Index 上可以取得的話，可以參考 Python packaging user guide。"
+  },
+  {
+    "doc_id": "whatnow.html",
+    "title": "13. 現在可以來學習些什麼？¶",
+    "paragraph_id": 2,
+    "text": "閱讀本教學可能增強你對於使用 Python 的興趣——你應該非常渴望使用 Python 來解決在現實生活中所遭遇的問題。該從哪裡學習更多呢？"
+  },
+  {
+    "doc_id": "whatnow.html",
+    "title": "13. 現在可以來學習些什麼？¶",
+    "paragraph_id": 5,
+    "text": "你該好好的瀏覽這份手冊，它提供了完整（但簡潔）的參考素材像是型別、函式與標準函式庫裡的模組。標準的 Python 發行版本會包含大量的附加程式碼。有些模組可以讀取 Unix 信箱、透過 HTTP 來檢索文件、產生亂數、分析命令列選項、壓縮資料、及許多其他任務。瀏覽函式庫參考手冊可以讓你了解有哪些模組可以用。"
+  },
+  {
+    "doc_id": "whatnow.html",
+    "title": "13. 現在可以來學習些什麼？¶",
+    "paragraph_id": 7,
+    "text": "Python 語言參考手冊：Python 語法以及語意的詳細說明。這份文件閱讀起來會有些吃力，但作為一個語言本身的完整指南是非常有用的。"
+  },
+  {
+    "doc_id": "whatnow.html",
+    "title": "13. 現在可以來學習些什麼？¶",
+    "paragraph_id": 9,
+    "text": "https://www.python.org：Python 的主要網站。它包含程式碼、文件以及連結到 Python 相關聯的網頁。"
+  },
+  {
+    "doc_id": "whatnow.html",
+    "title": "13. 現在可以來學習些什麼？¶",
+    "paragraph_id": 11,
+    "text": "https://pypi.org：Python 套件索引 (Python Package Index)，之前也被暱稱為 Cheese Shop [1]，彙總了使用者開發 Python 模組的索引，並提供模組能夠被下載。一旦開始發佈相關程式碼，你可以將開發的作品註冊到這裡並且讓其他人找到。"
+  },
+  {
+    "doc_id": "whatnow.html",
+    "title": "13. 現在可以來學習些什麼？¶",
+    "paragraph_id": 12,
+    "text": "https://code.activestate.com/recipes/langs/python/：Python Cookbook 是一個相當大的程式碼集，包含程式碼範例、較大的模組以及有用的腳本。特別值得注意的貢獻則被收集在一本名為 Python Cookbook (O'Reilly & Associates, ISBN 0-596-00797-3.) 的書籍中。"
+  },
+  {
+    "doc_id": "whatnow.html",
+    "title": "13. 現在可以來學習些什麼？¶",
+    "paragraph_id": 13,
+    "text": "https://pyvideo.org 從研討會與使用者群組聚會裡收集與 Python 相關的影片連結。"
+  },
+  {
+    "doc_id": "whatnow.html",
+    "title": "13. 現在可以來學習些什麼？¶",
+    "paragraph_id": 14,
+    "text": "https://scipy.org：The Scientific Python 專案是一個包含用於高速陣列運算與操作的模組，以及用於如線性代數、傅利葉變換、非線性求解器、隨機數分佈、統計分析等一系列的套件。"
+  },
+  {
+    "doc_id": "whatnow.html",
+    "title": "13. 現在可以來學習些什麼？¶",
+    "paragraph_id": 15,
+    "text": "對於 Python 相關的疑問與問題回報，你可以張貼到新聞群組comp.lang.python，或將它們寄至 python-list@python.org 的郵寄清單 (mailing list)。新聞群組和郵寄清單是個閘道，因此張貼到其中的郵件都將自動轉發給另一個。每天會有數以百計的內容，詢問（和回答）問題、建議新功能與發佈新的模組。郵寄清單會存檔在 https://mail.python.org/pipermail/。"
+  },
+  {
+    "doc_id": "whatnow.html",
+    "title": "13. 現在可以來學習些什麼？¶",
+    "paragraph_id": 16,
+    "text": "在張貼之前，請先確認問題是否在常見問題（也被稱為 FAQ）這個清單內。FAQ 會回答出現很多次的問題及解答，有很多問題甚至已經包含解決問題的方法。"
+  },
+  {
+    "doc_id": "whatnow.html",
+    "title": "13. 現在可以來學習些什麼？¶",
+    "paragraph_id": 18,
+    "text": "「Cheese Shop（起司店）」是 Monty Python 短劇：一位顧客進入一家起司店，但無論他要哪種起司，店員都說沒有貨。"
+  },
+  {
+    "doc_id": "interactive.html",
+    "title": "14. 互動式輸入編輯和歷史記錄替換¶",
+    "paragraph_id": 2,
+    "text": "有些版本的 Python 直譯器支援目前輸入內容的編輯和歷史記錄的替換 (history substitution)，類似在 Korn shell 和 GNU Bash shell 中的功能。這個功能是用 GNU Readline 函式庫來實作，它支援多種編輯的風格。這個函式庫有它自己的說明文件，在這裡我們就不重複了。"
+  },
+  {
+    "doc_id": "interactive.html",
+    "title": "14. 互動式輸入編輯和歷史記錄替換¶",
+    "paragraph_id": 3,
+    "text": "在直譯器啟動的時候，變數和模組名稱的自動完成功能會被自動啟用，所以可以用 Tab 鍵來叫用自動完成函式；它會查看 Python 的陳述式名稱、目前區域變數名稱和可用模組名稱。對於像是 string.a 的點分隔運算式 (dotted expression)，它會對最後一個 '.' 之前的運算式求值，然後根據求值結果物件的屬性，給予自動完成的建議。請注意，如果一個物件有 __getattr__() method（方法），同時又是該運算式的一部份，這樣可能會執行應用程式定義的程式碼。預設設定也會把你的指令歷史記錄儲存在你的使用者資料夾內，一個名為 .python_history 的檔案中。在下一次啟動互動式直譯器時，這些歷史記錄依然可以被使用。"
+  },
+  {
+    "doc_id": "interactive.html",
+    "title": "14. 互動式輸入編輯和歷史記錄替換¶",
+    "paragraph_id": 4,
+    "text": "與早期版本的直譯器相比，上述功能的出現的確是一個巨大的進步；但還是有一些願望沒有被實現：如果能在每次換行時給予適當的縮排建議（剖析器 (parser) 知道下一行是否需要縮排標記 (INDENT token)），那就更棒了。自動完成機制可能會使用直譯器的符號表。若有一個命令能夠檢查（或甚至建議）括號、引號和其他符號的匹配，那也會很有用。"
+  },
+  {
+    "doc_id": "interactive.html",
+    "title": "14. 互動式輸入編輯和歷史記錄替換¶",
+    "paragraph_id": 5,
+    "text": "有一個功能增強的互動式直譯器替代方案，已經存在一段時間，稱為 IPython，它具有 Tab 鍵自動完成、物件探索和進階歷史記錄管理等特色。它也可以完全客製化並被嵌入到其他應用程式中。另一個類似的增強型互動式環境，稱為 bpython。"
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 2,
+    "text": "在計算機架構中，浮點數 (floating-point number) 是以基數為 2（二進位）的小數表示。例如說，在十進位小數中 0.625 可被分為 6/10 + 2/100 + 5/1000，同樣的道理，二進位小數 0.101 可被分為 1/2 + 0/4 + 1/8。這兩個小數有相同的數值，而唯一真正的不同在於前者以十進位表示，後者以二進位表示。"
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 3,
+    "text": "不幸的是，大多數十進位小數無法精準地以二進位小數表示。一般的結果為，你輸入的十進位浮點數只能由實際儲存在計算機中的二進位浮點數近似。"
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 7,
+    "text": "依此類推，不論你使用多少位數表示小數，最後的結果都無法精準地表示 1/3，但你還是能越來越精準地表示 1/3。"
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 8,
+    "text": "同樣的道理，不論你願意以多少位數表示二進位小數，十進位小數 0.1 都無法被二進位小數精準地表達。在二進位小數中，1/10 會是一個無限循環小數："
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 9,
+    "text": "只要你停在任何有限的位數，你就只會得到近似值。而現在大多數的計算機中，浮點數是透過二進位分數近似的，其中分子是從最高有效位元開始，用 53 個位元表示，分母則是以二為底的指數。在 1/10 的例子中，二進位分數為 3602879701896397 / 2 ** 55，而這樣的表示十分地接近，但不完全等同於 1/10 的真正數值。"
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 10,
+    "text": "由於數值顯示的方式，很多使用者並沒有發現數值是個近似值。Python 只會印出一個十進位近似值，其近似了儲存在計算機中的二進位近似值的真正十進位數值。在大多數的計算機中，如果 Python 真的會印出完整的十進位數值，其表示儲存在計算機中的 0.1 的二進位近似值，它將顯示為："
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 12,
+    "text": "一定要記住，雖然印出的數字看起來是精準的 1/10，但真正儲存的數值是能表示的二進位分數中，最接近精準數值的數。"
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 13,
+    "text": "有趣的是，有許多不同的十進位數，共用同一個最接近的二進位近似分數。例如說：數字 0.1 和 0.10000000000000001 和 0.1000000000000000055511151231257827021181583404541015625，都由 3602879701896397 / 2 ** 55 近似。由於這三個十進位數值共用同一個近似值，任何一個數值都可以被顯示，同時保持 eval(repr(x)) == x。"
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 14,
+    "text": "歷史上，Python 的提示字元 (prompt) 與內建的 repr() 函式會選擇上段說明中有 17 個有效位元的數：0.10000000000000001。從 Python 3.1 版開始，Python（在大部分的系統上）現在能選擇其中最短的數並簡單地顯示為 0.1。"
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 15,
+    "text": "注意，這是二進位浮點數理所當然的特性，並不是 Python 的錯誤 (bug)，更不是你程式碼的錯誤。只要程式語言有支援硬體的浮點數運算，你將會看到同樣的事情出現在其中（雖然有些程式語言預設不會顯示該差異，有些甚至是在所有的輸出模式中都不會顯示。）"
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 16,
+    "text": "為求更優雅的輸出，你可能想要使用字串的格式化 (string formatting) 產生限定的有效位數："
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 18,
+    "text": "這種幻覺可能會產生下一個幻覺。舉例來說，因為 0.1 不是真正的 1/10，把三個 0.1 的值相加，也不會產生精準的 0.3："
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 19,
+    "text": "同時，因為 0.1 不能再更接近精準的 1/10，還有 0.3 不能再更接近精準的 3/10，預先用 round() 函式捨入並不會有幫助："
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 22,
+    "text": "二進位浮點數架構下還有很多這樣的意外。底下的「表示法誤差 (Representation Error)」章節，詳細地解釋了「0.1」的問題。Examples of Floating Point Problems（浮點數問題範例）一文提供了二進位浮點數的作用方式與現實中這類常見問題的摘錄。如果想要其他常見問題的更完整描述，可以參考 The Perils of Floating Point（浮點數的風險）。"
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 23,
+    "text": "如同上文的末段所述，「這個問題並沒有簡單的答案。」不過，也不必對浮點過度擔心！Python 的 float（浮點數）運算中的誤差，是從浮點硬體繼承而來，而在大多數的計算機上，每次運算的誤差範圍不會大於 2**53 分之 1。這對大多數的任務來說已經相當足夠，但你需要記住，它並非十進位運算，且每一次 float 運算都可能會承受新的捨入誤差。"
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 24,
+    "text": "雖然浮點運算確實存在一些問題，但在一般情況下，如果你只是把最終結果的顯示值，以十進位方式捨入至預期的位數，那麼仍會得到你預期的結果。str() 通常就能滿足要求，而若想要更細緻的控制，可參閱Format string syntax中關於 str.format() method（方法）的格式說明符號。"
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 25,
+    "text": "對於需要精準十進位表示法的用例，可以試著用 decimal 模組，它可實作適用於會計應用程式與高精確度應用程式的十進位運算。"
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 26,
+    "text": "另一種支援精準運算的格式為 fractions 模組，該模組基於有理數來實作運算（因此可以精確表示像 1/3 這樣的數字）。"
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 27,
+    "text": "如果你是浮點運算的重度使用者，你應該看一下 NumPy 套件，以及由 SciPy 專案提供的許多用於數學和統計學運算的其他套件。請參閱 <https://scipy.org>。"
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 28,
+    "text": "在罕見情況下，當你真的想知道一個 float 的精準值，Python 提供的工具可協助達成。float.as_integer_ratio() method 可將一個 float 的值表示為分數："
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 30,
+    "text": "float.hex() method 以十六進位（基數為 16）表示 float，一樣可以給出你的電腦所儲存的精準值："
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 32,
+    "text": "由於該表示法是精準的，因此適用於在不同版本的 Python 之間可靠地傳送數值（獨立於系統平台），並與支援相同格式的其他語言（如 JAVA 和 C99）交換資料。"
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 33,
+    "text": "另一個有用的工具是 sum() 函式，能在計算總和時幫忙減少精確度的損失。當數值被加到運行中的總計值時，它會追蹤「失去的位數 (lost digits)」。這可以明顯改善總體準確度 (overall accuracy)，使得誤差不至於累積到影響最終總計值的程度："
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 34,
+    "text": "math.fsum() 更進一步將數值被加到運行總計中的總計時追蹤所有「失去的位數」，以便結果僅有一次捨入。這比 sum() 慢，但在不常見的情況下會更準確，在這種情況下，大量輸入大多相互抵消，最終的總和會接近於零："
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 35,
+    "text": "本節將會詳細解釋「0.1」的例子，並說明你自己要如何對類似案例執行精準的分析。 以下假設你對二進位浮點表示法已有基本程度的熟悉。"
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 36,
+    "text": "Representation error（表示法誤差）是指在真實情況中，有些（實際上是大多數）十進位小數並不能精準地以二進位（基數為 2）小數表示。這是 Python（或 Perl、C、C++、JAVA、Fortran 和其他許多）通常不會顯示你期望的精準十進位數字的主要原因。"
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 37,
+    "text": "為什麼呢？因為 1/10 無法精準地以一個二進位小數來表示。至少自從 2000 年以來，幾乎所有的計算機皆使用 IEEE-754 浮點數運算標準，並且幾乎所有的平台都以 IEEE 754 binary64 標準中的「雙精度 (double precision)」來作為 Python 的 float。IEEE 754 binary64 的值包含 53 位元的精度，所以在輸入時，電腦會努力把 0.1 轉換到最接近的分數，以 J/2**N 的形式表示，此處 J 是一個正好包含 53 位元的整數。可以將："
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 39,
+    "text": "而前面提到 J 有精準的 53 位元（即 >= 2**52 但 < 2**53），所以 N 的最佳數值是 56："
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 40,
+    "text": "意即，要使 J 正好有 53 位元，則 56 會是 N 的唯一值。而 J 最有可能的數值就是經過捨入後的該商數："
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 44,
+    "text": "請注意，由於我們有進位，所以這實際上比 1/10 大了一點；如果我們沒有進位，商數將會有點小於 1/10。但在任何情況下都不可能是精準的 1/10！"
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 45,
+    "text": "所以電腦從來沒有「看到」1/10：它看到的是上述的精準分數，也就是它能得到的 IEEE 754 double 最佳近似值："
+  },
+  {
+    "doc_id": "floatingpoint.html",
+    "title": "15. 浮點數運算：問題與限制¶",
+    "paragraph_id": 47,
+    "text": "這表示儲存在電腦中的精準數值等於十進位值 0.1000000000000000055511151231257827021181583404541015625。與其顯示完整的十進位數值，許多語言（包括 Python 的舊版本）選擇將結果捨入至 17 個有效位數："
+  },
+  {
+    "doc_id": "appendix.html",
+    "title": "16. 附錄¶",
+    "paragraph_id": 2,
+    "text": "互動式 REPL 有兩種變體。經典的基本解釋器在所有平台上都支援，具有最低限度的行控制能力（line control capabilities）。"
+  },
+  {
+    "doc_id": "appendix.html",
+    "title": "16. 附錄¶",
+    "paragraph_id": 3,
+    "text": "自 Python 3.13 起，預設會使用新的互動式 shell。這個 shell 支援顏色、多行編輯、歷史瀏覽和貼上模式。要停用顏色，請參閱 Controlling color 以取得詳細資訊。功能鍵提供了一些額外的功能。F1 進入互動式幫助瀏覽器 pydoc。F2 允許瀏覽命令列歷史，且不會有輸出，也不會有 >>> 和 ... 提示。F3 進入「貼上模式」，這使得貼上較大的程式碼區塊更容易。按 F3 可以返回正常提示。"
+  },
+  {
+    "doc_id": "appendix.html",
+    "title": "16. 附錄¶",
+    "paragraph_id": 4,
+    "text": "使用新的互動 shell 時， 請輸入 exit 或 quit 來離開 shell。不需要在這些指令後面加上呼叫括號。"
+  },
+  {
+    "doc_id": "appendix.html",
+    "title": "16. 附錄¶",
+    "paragraph_id": 6,
+    "text": "當一個錯誤發生時，直譯器會印出一個錯誤訊息和堆疊回溯。在互動模式下，它將返回主提示字元；當輸入來自檔案時，它在印出堆疊回溯後以非零退出狀態 (nonzero exit status) 退出。(由 except 子句在 try 陳述式中處理的例外在這種情況下不是錯誤。) 有些錯誤是無條件嚴重的，會導致非零退出狀態；這適用於內部不一致和一些記憶體耗盡的情況。所有的錯誤訊息都被寫入標準錯誤輸出；被執行指令的正常輸出被寫入標準輸出。"
+  },
+  {
+    "doc_id": "appendix.html",
+    "title": "16. 附錄¶",
+    "paragraph_id": 7,
+    "text": "向主提示字元或次提示字元輸入中斷字元（通常是 Control-C 或 Delete ）會取消輸入並回傳到主提示字元。[1] 在指令執行過程中輸入一個中斷，會引發 KeyboardInterrupt 例外，但可以透過 try 陳述式來處理。"
+  },
+  {
+    "doc_id": "appendix.html",
+    "title": "16. 附錄¶",
+    "paragraph_id": 8,
+    "text": "在類 BSD 的 Unix 系統上，Python 腳本可以直接執行，就像 shell 腳本一樣，透過放置以下這行："
+  },
+  {
+    "doc_id": "appendix.html",
+    "title": "16. 附錄¶",
+    "paragraph_id": 9,
+    "text": "（假設直譯器在用戶的 PATH 上）在腳本的開頭並給檔案一個可執行模式。#! 必須是檔案的前兩個字元。在某些平台上，第一行必須以 Unix 樣式的換行 ('\\n') 結尾，而不是 Windows ('\\r\\n') 換行。請注意，井號 '#' 用於在 Python 中開始註解。"
+  },
+  {
+    "doc_id": "appendix.html",
+    "title": "16. 附錄¶",
+    "paragraph_id": 11,
+    "text": "在 Windows 系統上，沒有「可執行模式」的概念。Python 安裝程式會自動將 .py 檔案與 python.exe 聯繫起來，這樣雙擊 Python 檔案就會作為腳本運行。副檔名也可以是 .pyw，在這種情況下，通常會出現的控制台視窗會被隱藏。"
+  },
+  {
+    "doc_id": "appendix.html",
+    "title": "16. 附錄¶",
+    "paragraph_id": 12,
+    "text": "當你互動式地使用 Python 時，每次啟動直譯器時執行一些標準指令是非常方便的。你可以透過設置一個名為 PYTHONSTARTUP 的環境變數來實現，該變數是一個包含啟動指令的檔案名。它的功能類似 Unix shell 的 .profile 。"
+  },
+  {
+    "doc_id": "appendix.html",
+    "title": "16. 附錄¶",
+    "paragraph_id": 13,
+    "text": "這個檔案只在互動模式中被讀取，當 Python 從腳本中讀取指令時，此檔案不會被讀取，當 /dev/tty 作為指令的明確來源時也不會（否則表現得像互動模式）。它在執行互動式指令的同一命名空間中執行，因此它所定義或 import 的物件可以在互動模式中不加限定地使用。你也可以在這個檔案中改變 sys.ps1 和 sys.ps2 等提示字元。"
+  },
+  {
+    "doc_id": "appendix.html",
+    "title": "16. 附錄¶",
+    "paragraph_id": 14,
+    "text": "如果你想從目前目錄中讀取一個額外的啟動檔案，你可以在全域啟動檔案中使用類似 if os.path.isfile('.pythonrc.py'): exec(open('.pythonrc.py').read() 的程式碼設定這個行為。如果你想在一個腳本中使用啟動檔案，你必須在腳本中明確地這樣做："
+  },
+  {
+    "doc_id": "appendix.html",
+    "title": "16. 附錄¶",
+    "paragraph_id": 15,
+    "text": "Python 提供了兩個鉤子 (hook) 讓你可以將它客製化： sitecustomize 和 usercustomize 。要看它是如何運作的，你首先需要找到你的 site-packages 的位置。啟動 Python 並運行這段程式碼："
+  },
+  {
+    "doc_id": "appendix.html",
+    "title": "16. 附錄¶",
+    "paragraph_id": 16,
+    "text": "現在，你可以在該目錄中建立一個名為 usercustomize.py 的檔案，並將你想要的任何內容放入其中。它會影響 Python 的每次呼叫，除非它以 -s 選項啟動以禁用自動 import 。"
+  },
+  {
+    "doc_id": "appendix.html",
+    "title": "16. 附錄¶",
+    "paragraph_id": 17,
+    "text": "sitecustomize 的運作方式相同，但通常是由電腦的管理員在全域 site-packages 目錄下建立，並在 usercustomize 之前 import 。更多細節請參閱 site 模組的文件。"
+  }
+]
