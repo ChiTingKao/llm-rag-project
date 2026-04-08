@@ -1,0 +1,16 @@
+﻿question,answer
+Python 如何使用 for 迴圈？,使用 for 變數 in 可迭代物件，例如 for i in range()
+while 迴圈的用途是什麼？,當條件為 True 時持續執行程式區塊
+list 是什麼？,list 是 Python 中用來儲存多個元素的資料結構
+dictionary 是什麼？,dictionary 是 key-value 結構
+Python 如何定義函式？,使用 def 關鍵字
+for 迴圈和 while 迴圈有什麼差別？,for 用於遍歷序列 while 根據條件
+range() 是做什麼用的？,產生整數序列
+什麼是 list comprehension？,簡潔建立 list 的方式
+Python 如何存取 dictionary 的值？,透過 key 存取
+什麼是 function parameter？,函式的輸入變數
+如果我要印出 0 到 9 的數字應該怎麼寫？,for i in range(10)
+如何建立一個包含平方數的 list？,[x**2 for x in range()]
+如何遍歷 dictionary 的 key 和 value？,使用 dict.items()
+什麼情況適合使用 while 而不是 for？,當次數不確定時
+Python 中如何避免無限迴圈？,讓條件變 False 或使用 break
