@@ -37,16 +37,6 @@
 ### 配置參數
 #### 在 config.ini 或 config.py 設定：
 #### 
-#### [LLM]
-#### model = qwen3:8b
-#### endpoint = http://localhost:11434/api/generate
-#### stream = False
-#### top_k = 10
-#### 
-#### [Paths]
-#### chunks_path = data/processed/chunks.npy
-#### index_path = data/processed/python_tutorial.faiss
-#### 
 #### 
 ### 注意事項
 #### FAISS 在 Windows 上對中文或長路徑敏感，建議將專案放在全英文路徑
